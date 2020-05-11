@@ -1,6 +1,7 @@
 ---
 layout: default
 title: tags
+permalink: /tags/
 ---
 
 {% for tags in site.tags %}
