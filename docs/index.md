@@ -1,6 +1,4 @@
-Antonio @ AWS is a personal webpage maintained by [Antonio Feijao UK](https://www.AntonioCloud.com).
-
-The opinions expressed are my own and do not necessarily represent those of current or past employers.
+Learning by doing! Hands on AWS exercises with [Antonio AWS](https://www.AntonioAWS.com)
 
 
 ## VPC1 to TGW to VPC2
