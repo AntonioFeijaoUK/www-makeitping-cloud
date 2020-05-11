@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Antonio AWS
+title: Learning by doing! Hands on AWS exercises with Antonio AWS
 ---
 
 Learning by doing! Hands on AWS exercises with [Antonio AWS](https://www.AntonioAWS.com)
