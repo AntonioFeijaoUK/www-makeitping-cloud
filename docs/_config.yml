@@ -1,15 +1,17 @@
-plugins:
-#  - jekyll-redirect-from
-
 theme: jekyll-theme-minimal
-
 
 title: "Antonio AWS"
 description: "Antonio AWS is a personal webpage maintained by Antonio Feijao UK"
-
 
 logo: "https://avatars1.githubusercontent.com/u/2548084?s=460&u=9e50289e33b8c3fd3d8778afd89f46d27ec70f35&v=4"
 
 show_downloads: "false"
 
 google_analytics: ""
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+#  - jekyll-redirect-from
+
