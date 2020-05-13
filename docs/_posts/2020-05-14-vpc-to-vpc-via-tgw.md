@@ -24,9 +24,11 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ---
 
-## Whiteboard for discussion
+## Useful link
 
-- whiteboard [link here](https://awwapp.com/b/u6hxhr9cvgwgw/)
+- [sli.io](https://sli.do/)
+
+- [whiteboard](https://awwapp.com/b/u6hxhr9cvgwgw/)
 
 ---
 
