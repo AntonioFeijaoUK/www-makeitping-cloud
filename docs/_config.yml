@@ -1,4 +1,6 @@
-theme: jekyll-theme-minimal
+theme: jekyll-theme-slate
+#theme: jekyll-theme-minimal
+
 
 title: "Antonio AWS"
 description: "Antonio AWS is a personal webpage maintained by Antonio Feijao UK. The opinions expressed are my own and do not necessarily represent those of current or past employers."
@@ -15,5 +17,5 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-#  - jekyll-redirect-from
+# - jekyll-redirect-from
 
