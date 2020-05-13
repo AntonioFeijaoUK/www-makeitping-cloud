@@ -17,6 +17,8 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ---
 
+## Table of content
+
 * auto-gen TOC:
 {:toc}
 
@@ -119,7 +121,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ## Create a VPC-10-0
 
-```shell
+```bash
 
 aws ec2 create-vpc --cidr-block 10.0.0.0/16
 
