@@ -10,9 +10,9 @@ rougify style thankful_eyes > syntax.css
 credits to https://bnhr.xyz/2017/03/25/add-syntax-highlighting-to-your-jekyll-site-with-rouge.html
 ***/
 
-code.language-plaintext.highlighter-rouge {
-	color: red; #ffffff
-	background-color: black; #0066FF
+pre, code.language-plaintext.highlighter-rouge {
+	color: #ffffff; 
+	background-color: #0066FF; 
 	padding-top: 1px;
 	padding-right: 3px;
 	padding-bottom: 1px;
@@ -24,8 +24,7 @@ code.language-plaintext.highlighter-rouge {
 }
 
 
-
-pre .btnIcon {
+TEMPpre {
   position: absolute;
   top: 4px;
   z-index: 2;
