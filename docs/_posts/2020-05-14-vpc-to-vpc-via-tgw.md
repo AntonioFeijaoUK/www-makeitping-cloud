@@ -38,7 +38,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ---
 
-## Hands-on using `VPC wizard`
+## Hands-on using VPC wizard
 
 - Sign-In into you AWS Dev/Test account
 
@@ -111,17 +111,19 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 
 
+## Creating a TGW
+
+## Creating SSM role for EC2
+
+
+---
 
 
 
 
 
 
-
-
-
-
-## Create a VPC-10-0
+## Alternative using AWS CLI
 
 ```python
 
@@ -130,7 +132,7 @@ aws ec2 create-vpc --cidr-block 10.0.0.0/16
 #VPC_ID=.....
 ```
 
-## Create subnets with that VPC
+### Create subnets with that VPC
 
 ```shell
 
@@ -144,7 +146,7 @@ aws ec2 create-subnet --vpc-id ${VPC_ID} --cidr-block 10.0.6.0/24
 ```
 
 
-# Create a Internet Gateway
+### Create a Internet Gateway
 
 ```bash
 
