@@ -42,25 +42,25 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 ### Creating the VPC-10-0-0
 
 - IPv4 CIDR block: `10.0.0.0/16`
-    - (meaning IP range from 10.0.0.0 up to 10.0.255.255, [more details here on VPC IP Addressing](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html))
+   + (meaning IP range from 10.0.0.0 up to 10.0.255.255, [more details here on VPC IP Addressing](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html))
 
-  - VPC Name: `VPC-10-0-0`
+- VPC Name: `VPC-10-0-0`
 
-  - Public subnet's IPv4 CIDR: `10.0.1.0/24`
+- Public subnet's IPv4 CIDR: `10.0.1.0/24`
 
-  - Availability Zone: `us-east-1a`
+- Availability Zone: `us-east-1a`
 
-  - Public subnet name: `Public subnet-10-0-1`
+- Public subnet name: `Public subnet-10-0-1`
 
-  - Private subnet's IPv4 CIDR: `10.0.4.0/24`
-  
-  - Availability Zone: `us-east-1a`
-  
-  - Private subnet name: `Private subnet-10-0-4`
+- Private subnet's IPv4 CIDR: `10.0.4.0/24`
 
-  - `Use a NAT instance instead).` - `t2.nana` - `No key pair`
-  
-  - leave follow options as default
+- Availability Zone: `us-east-1a`
+
+- Private subnet name: `Private subnet-10-0-4`
+
+- `Use a NAT instance instead).` - `t2.nana` - `No key pair`
+
+- leave follow options as default
 
 
 
