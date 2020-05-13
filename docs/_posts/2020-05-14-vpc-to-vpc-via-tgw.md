@@ -36,7 +36,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ---
 
-## Hands-on using VPC wizard
+## Hands-on using `VPC wizard`
 
 - Sign-In into you AWS Dev/Test account
 
