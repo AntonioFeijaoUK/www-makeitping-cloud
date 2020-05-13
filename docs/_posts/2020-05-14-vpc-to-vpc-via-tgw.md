@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ping from an EC2 instance on private subnet and on different VPC via TGW
+autor: Antonio Feijao UK
 categories:
   - ec2
   - networking
