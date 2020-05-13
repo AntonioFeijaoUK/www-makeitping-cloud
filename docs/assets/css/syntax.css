@@ -11,12 +11,12 @@ credits to https://bnhr.xyz/2017/03/25/add-syntax-highlighting-to-your-jekyll-si
 ***/
 
 pre, code.language-plaintext.highlighter-rouge {
-	color: #ffffff; 
-	background-color: #0066FF; 
+	color: white; #ffffff; 
+	background-color: black; #0066FF; 
 	padding-top: 1px;
-	padding-right: 3px;
+	padding-right: 2px;
 	padding-bottom: 1px;
-	padding-left: 3px;
+	padding-left: 2px;
 	border-radius: 5px;
 	font-size: 14px;
 	font-weight: normal;
