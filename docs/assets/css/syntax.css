@@ -24,7 +24,7 @@ code.language-plaintext.highlighter-rouge {
 }
 
 
-.highlight table td { padding: 1px; }
+.highlight table td { padding: 0px; }
 .highlight table pre { margin: 0; }
 .highlight, .highlight .w {
   color: #93a1a1;
