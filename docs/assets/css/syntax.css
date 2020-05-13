@@ -12,176 +12,201 @@ credits to https://bnhr.xyz/2017/03/25/add-syntax-highlighting-to-your-jekyll-si
 
 ***/
 
-
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight {
-  color: #faf6e4;
-  background-color: #122b3b;
-}
-.highlight .gl {
-  color: #dee5e7;
-  background-color: #4e5d62;
-}
-.highlight .gp {
-  color: #a8e1fe;
-  font-weight: bold;
-}
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
-  color: #6c8b9f;
-  font-style: italic;
-}
-.highlight .cp {
-  color: #b2fd6d;
-  font-weight: bold;
-}
-.highlight .err {
-  color: #fefeec;
-  background-color: #cc0000;
-}
-.highlight .gr {
-  color: #cc0000;
-  font-weight: bold;
-  font-style: italic;
-}
-.highlight .k, .highlight .kd, .highlight .kv {
-  color: #f6dd62;
-  font-weight: bold;
-}
-.highlight .o, .highlight .ow {
-  color: #4df4ff;
-  font-weight: bold;
-}
-.highlight .p, .highlight .pi {
-  color: #4df4ff;
-}
-.highlight .gd {
-  color: #cc0000;
-}
-.highlight .gi {
-  color: #b2fd6d;
-}
-.highlight .ge {
-  font-style: italic;
-}
-.highlight .gs {
-  font-weight: bold;
-}
-.highlight .gt {
-  color: #dee5e7;
-  background-color: #4e5d62;
-}
-.highlight .kc {
-  color: #f696db;
-  font-weight: bold;
-}
-.highlight .kn {
-  color: #ffb000;
-  font-weight: bold;
-}
-.highlight .kp {
-  color: #ffb000;
-  font-weight: bold;
-}
-.highlight .kr {
-  color: #ffb000;
-  font-weight: bold;
-}
 .highlight .gh {
-  color: #ffb000;
-  font-weight: bold;
-}
-.highlight .gu {
-  color: #ffb000;
-  font-weight: bold;
-}
-.highlight .kt {
-  color: #b2fd6d;
-  font-weight: bold;
-}
-.highlight .no {
-  color: #b2fd6d;
-  font-weight: bold;
-}
-.highlight .nc {
-  color: #b2fd6d;
-  font-weight: bold;
-}
-.highlight .nd {
-  color: #b2fd6d;
-  font-weight: bold;
-}
-.highlight .nn {
-  color: #b2fd6d;
-  font-weight: bold;
-}
-.highlight .bp {
-  color: #b2fd6d;
-  font-weight: bold;
-}
-.highlight .ne {
-  color: #b2fd6d;
-  font-weight: bold;
-}
-.highlight .nl {
-  color: #ffb000;
-  font-weight: bold;
-}
-.highlight .nt {
-  color: #ffb000;
-  font-weight: bold;
-}
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
-  color: #f696db;
-  font-weight: bold;
-}
-.highlight .ld {
-  color: #f696db;
-  font-weight: bold;
-}
-.highlight .ss {
-  color: #f696db;
-  font-weight: bold;
-}
-.highlight .s, .highlight .sa, .highlight .sb, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .sr, .highlight .s1 {
-  color: #fff0a6;
-  font-weight: bold;
-}
-.highlight .se {
-  color: #4df4ff;
-  font-weight: bold;
-}
-.highlight .sc {
-  color: #4df4ff;
-  font-weight: bold;
-}
-.highlight .si {
-  color: #4df4ff;
-  font-weight: bold;
-}
-.highlight .nb {
-  font-weight: bold;
-}
-.highlight .ni {
   color: #999999;
-  font-weight: bold;
 }
-.highlight .w {
-  color: #BBBBBB;
+.highlight .sr {
+  color: #f6aa11;
 }
 .highlight .go {
-  color: #BBBBBB;
+  color: #888888;
 }
-.highlight .nf, .highlight .fm {
-  color: #a8e1fe;
+.highlight .gp {
+  color: #555555;
 }
-.highlight .py {
-  color: #a8e1fe;
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
 }
 .highlight .na {
-  color: #a8e1fe;
+  color: #a6e22e;
 }
-.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm {
-  color: #a8e1fe;
-  font-weight: bold;
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nn {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nl {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .ni {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .bp {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .vg {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .vi {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .w {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
 }
