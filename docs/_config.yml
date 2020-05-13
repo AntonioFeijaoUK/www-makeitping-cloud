@@ -27,6 +27,6 @@ kramdown:
  input: GFM
  auto_ids: true
  hard_wrap: false
- syntax_highlighter: rouge monokai.sublime
+ syntax_highlighter: rouge
  parse_block_html: true
  
