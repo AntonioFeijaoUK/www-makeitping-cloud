@@ -121,7 +121,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ## Create a VPC-10-0
 
-```bash
+```python
 
 aws ec2 create-vpc --cidr-block 10.0.0.0/16
 
@@ -144,7 +144,7 @@ aws ec2 create-subnet --vpc-id ${VPC_ID} --cidr-block 10.0.6.0/24
 
 # Create a Internet Gateway
 
-```shell
+```bash
 
 aws ec2 create-internet-gateway
 
