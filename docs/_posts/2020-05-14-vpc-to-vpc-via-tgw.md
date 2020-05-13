@@ -55,7 +55,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 - IPv4 CIDR block: `10.0.0.0/16`
   + meaning IP range from 10.0.0.0 up to 10.0.255.255
   + "The allowed block size is between a /16 netmask (65,536 IP addresses) and /28 netmask (16 IP addresses). [details here](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#VPC_Sizing)"
-  + IPs ending in `.0`, `.1`, `.2`, `.3` , `.255` are AWS reserved IPs - [details here](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) )
+  + IPs ending in `.0`, `.1`, `.2`, `.3` , `.255` are AWS reserved IPs - [details here](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html)
   + [more details here on VPC IP Addressing](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html))
   + [more details here on Private Address Space](https://tools.ietf.org/html/rfc1918#section-3)
 
