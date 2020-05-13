@@ -1,5 +1,4 @@
 /***
-
 gem install kramdown rouge
 
 rougify help style
@@ -9,7 +8,6 @@ rougify style thankful_eyes > syntax.css
 <link href="/assets/css/syntax.css" rel="stylesheet" >
 
 credits to https://bnhr.xyz/2017/03/25/add-syntax-highlighting-to-your-jekyll-site-with-rouge.html
-
 ***/
 
 .highlight table td { padding: 5px; }
