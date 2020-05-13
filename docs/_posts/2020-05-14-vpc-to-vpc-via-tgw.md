@@ -42,7 +42,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 ### Creating the VPC-10-0-0
 
 - IPv4 CIDR block: `10.0.0.0/16`
-  - (meaning IP range from 10.0.0.0 up to 10.0.255.255, [more details here on VPC IP Addressing](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html))
+    - (meaning IP range from 10.0.0.0 up to 10.0.255.255, [more details here on VPC IP Addressing](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html))
 
   - VPC Name: `VPC-10-0-0`
 
