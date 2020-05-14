@@ -167,7 +167,7 @@ Tip - Use `Filter by VPC`
 - Review `NAT Gateways`
 
   - Noticed that VPC-192-168 as no `NAT Gateways`, instead we used the `nat instance` which is an EC2 managed by you.
-  - Link on AWS [Comparison of NAT instances and NAT gatewaysn](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html)
+  - Link on AWS [Comparison of NAT instances and NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html)
 
 
 ---
