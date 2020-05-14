@@ -357,8 +357,35 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
 
 ---
 
+## Access your instance through AWS Systems Manager
 
+After a few minutes (can take up to 10 minutes), you should see your instance on service `AWS Systems Manager` section `Managed Instances`
 
+* Change to service `AWS Systems Manager`
+
+* Scroll down on the left until `Managed Instances`
+
+* Select one of the available instance, for example `instance-10-0-4-first`
+
+* Click `Actions` top-right hand side, select `Start session`
+
+You are now connected to the console of the instance in the private subnet.
+
+* Connected to the instance
+
+  * Can you reach the internet? - `ping aws.amazon.com`
+
+    * What is your public ip? - `curl ipinfo.io/json` or `curl ifconfig.io`
+
+    * What route are in this instance? - `route -n`
+
+    * Is the `httpd` service running? - `curl localhost`
+    
+    * What services or IPs are connected to this instance? `sudo netstat -pant`
+
+    * Can we reach 192.168.0.0/16 subnet? - `traceroute -n 192.168.4.10`  - `Control+C` to stop the traceroute command
+
+---
 
 ## Testing and Advanced commands
 
@@ -445,7 +472,7 @@ aws ec2 create-internet-gateway
 
 ## Altervative creating VPCs with Cloud Formation
 
-.... working in progress, any voluntair
+.... working in progress, any volunteer?
 
 ---
 
@@ -454,5 +481,13 @@ aws ec2 create-internet-gateway
 * [VPC subnets commands example](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-commands-example.html)
 
 * [EC2 instance](https://aws.amazon.com/ec2/)
+
 * [VPC with Private and Public Subnet](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html)
+
 * [Transit Gateway (TGW)](https://aws.amazon.com/transit-gateway/)
+
+* Youtube videos
+  * <https://youtu.be/awrdICiS6ug> - “Advanced Architectures with AWS Transit Gateway - AWS Online Tech Talks”
+
+  * <https://youtu.be/9Nikqn_02Oc> - “AWS re:Invent 2019: [REPEAT 1] AWS Transit Gateway reference architectures for many VPCs (NET406-R1)”
+
