@@ -381,41 +381,49 @@ While connected to the instance...
 
 * Can you reach the internet? - `ping aws.amazon.com`
 
-* What is your public ip? - `curl ipinfo.io/json` or `curl ifconfig.io`
+* What is your private ip address? - `ifconfig` or `ip address`
 
-* What route are in this instance? - `route -n`
+* What is your public ip address? - `curl ipinfo.io/json` or `curl ifconfig.io`
+
+* What route are in this instance? - `route -n` or `ip route`
 
 * Is the `httpd` service running? - `curl localhost`
 
   * If you did not install the `httpd` package, you run run a simple webserver with `python3`
 
 ```bash
-## install python3
-
+## installs python3
 sudo yum install -y python3
 
 ## creates index.html files with message "Hello from instance XXX"
-
 cd /tmp
 echo "Hello from instance XXX" > index.html
 
-## executes the
-
+## start the python3 module http.server
 sudo python3 -m http.server 80
-
-## if port 80 is in use, you can change to another port, remember to adjust security groups if needed.
 
 ```
    
   * `Control+C` stops the command from running
+  
+  * Port 80 already in use? No problem, you can change it to another port, remember if you need to adjust the security groups.
 
-  * To leave the command running in the background use the `&` at the end - `sudo python3 -m http.server 8080 &`
+  * To leave the command running in the background, use the `&` at the end of the command - `sudo python3 -m http.server 8080 &` and then test with `curl localhost:8080`
 
-   
 * What services or IPs are connected to this instance? `sudo netstat -pant`
 
 * Can we reach 192.168.0.0/16 subnet? - `traceroute -n 192.168.4.10`  - `Control+C` to stop the traceroute command
 
+
+---
+
+## Checkpoint where are we now
+
+OK - we have not fixed the routing, so we cannot reach the oposite subnet just yet!
+
+* Current status
+
+* image ![ec2-vpc-tgw-vpc-ec2](/assets/images/ec2-vpc-tgw-vpc-ec2.png)
 
 
 
