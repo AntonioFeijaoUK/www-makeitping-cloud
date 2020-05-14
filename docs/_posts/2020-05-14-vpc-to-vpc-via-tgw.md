@@ -169,7 +169,7 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
 
 aws ec2 create-vpc --cidr-block 10.0.0.0/16
 
-#VPC_ID=.....
+VPC_ID="Copy-VPC-ID-value-from-previous-command"
 
 ```
 
@@ -184,6 +184,7 @@ aws ec2 create-subnet --vpc-id ${VPC_ID} --cidr-block 10.0.3.0/24
 aws ec2 create-subnet --vpc-id ${VPC_ID} --cidr-block 10.0.4.0/24
 aws ec2 create-subnet --vpc-id ${VPC_ID} --cidr-block 10.0.5.0/24
 aws ec2 create-subnet --vpc-id ${VPC_ID} --cidr-block 10.0.6.0/24
+
 ```
 
 ### Create a Internet Gateway
@@ -194,7 +195,32 @@ aws ec2 create-internet-gateway
 
 ```
 
-.... working in progress
+### Create NAT Gateway
+
+* First allocate and Elastic IP
+
+* Create NAT Gateway
+
+### Creating Route tables and add the default routes IGW and NGW
+
+* Creating `Public-route-table-192-168` and assigned the `Internet Gateway (IGW)`
+
+0.0.0.0/0 -> IGW-xxxx
+
+...
+
+* Creating `Private-route-table-10-0` and assigned the `NAT Gateway`
+
+0.0.0.0 -> NGW-xxx
+
+
+... work in progress
+
+
+### Associating the Subnets with Route tables
+
+... work in progress
+
 
 ---
 
