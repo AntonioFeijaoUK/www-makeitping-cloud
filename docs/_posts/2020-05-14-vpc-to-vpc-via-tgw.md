@@ -371,44 +371,68 @@ After a few minutes (can take up to 10 minutes), you should see your instance on
 
 You are now connected to the console of the instance in the private subnet.
 
-* Connected to the instance
-
-  * Can you reach the internet? - `ping aws.amazon.com`
-
-    * What is your public ip? - `curl ipinfo.io/json` or `curl ifconfig.io`
-
-    * What route are in this instance? - `route -n`
-
-    * Is the `httpd` service running? - `curl localhost`
-    
-    * What services or IPs are connected to this instance? `sudo netstat -pant`
-
-    * Can we reach 192.168.0.0/16 subnet? - `traceroute -n 192.168.4.10`  - `Control+C` to stop the traceroute command
+> Did you notice we did not have to manage `ssh key` to access this instance command line
 
 ---
 
-## Testing and Advanced commands
+## Testing using ping and other command line tools
 
-* Can you ping on both directions? - `ping xxx instance-ip xxx`
+While connected to the instance...
 
-* Can you curl on both directions? (with `python3` package you can start a simple webserver `python3 -m http.server 80`
- * to install python3, type in the instance command line - `sudo yum install python3`
+* Can you reach the internet? - `ping aws.amazon.com`
+
+* What is your public ip? - `curl ipinfo.io/json` or `curl ifconfig.io`
+
+* What route are in this instance? - `route -n`
+
+* Is the `httpd` service running? - `curl localhost`
+
+  * If you did not install the `httpd` package, you run run a simple webserver with `python3`
+
+```bash
+## install python3
+
+sudo yum install -y python3
+
+## creates index.html files with message "Hello from instance XXX"
+
+cd /tmp
+echo "Hello from instance XXX" > index.html
+
+## executes the
+
+sudo python3 -m http.server 80
+
+## if port 80 is in use, you can change to another port, remember to adjust security groups if needed.
+
+```
+   
+  * `Control+C` stops the command from running
+
+  * To leave the command running in the background use the `&` at the end - `sudo python3 -m http.server 8080 &`
+
+   
+* What services or IPs are connected to this instance? `sudo netstat -pant`
+
+* Can we reach 192.168.0.0/16 subnet? - `traceroute -n 192.168.4.10`  - `Control+C` to stop the traceroute command
+
+
+
+
+
 
 * **Advanced** - Check the throughput and bandwidth with `iperf` ?
 
 * **Advanced** - `iperf` via VPC Peering, can you change the routing to use VPC Peering? Is it the same if you do a VPC peering?
   * Detail about [VPC Peering](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
 
-* Get you public ip `curl ipinfo.io/json`
-
-* Check the local ip addresses - `ifconfig`
-
-* Check TCP connections - `sudo netstat -pant`
-
 * **Advanced** - If you enable SSM Endpoint, can you see a difference on the connections?
 
 ---
 
+Below sections if WORK IN PROGRESS - Waiting for feedback
+
+---
 ## Alternative creating VPCs with AWS CLI
 
 ```bash
