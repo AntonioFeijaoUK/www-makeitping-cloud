@@ -206,15 +206,19 @@ We done here.
 
 ---
 
-## Launching 1 EC2-10-0-4 instance in VPC-10-0 and private subnet
+## Launching EC2 instance-10-0-4-first in VPC-10-0 and private subnet
 
 * Change to service to `EC2 - Virtual Servers in the Cloud`
 
 * Click on `Launch instance`
 
-* Select first `Amazon Linux 2 AMI (HVM), SSD Volume Type`, click `Select`
+* Step 1: Choose an Amazon Machine Image (AMI)
+  
+  * Select first `Amazon Linux 2 AMI (HVM), SSD Volume Type`, click `Select`
 
-* Leave the `Free tier eligible` option, click `Next: Configure Instance Details`
+* Step 2: Choose an Instance Type
+
+  * Leave the `Free tier eligible` option, click `Next: Configure Instance Details`
 
 * Step 3: Configure Instance Details
   
@@ -237,6 +241,118 @@ yum update -y
 curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a7be426da/raw/3d0930004b937f6dd7f273021218327b7129d609/aws-ec2-userdata-landing-webpage.sh | bash
 
 ```
+
+  * Click `Next: Add Storage`
+
+* Step 4: Add Storage
+
+  * Leave Default, click `Next: Add Tags`
+
+
+* Step 5: Add Tags
+
+  * Key - `Name`, Value - `instance-10-0-4-first`
+  
+  * Click `Next: Configure Security Group`
+  
+* Step 6: Configure Security Group
+
+  * Security group name: `SG-inbound-from-192-168`
+  
+  * Security group name: `SG-inbound-from-192-168`
+
+  * Change first Type to `HTTP`, source `192.168.0.0/16`
+  
+  * Click `Add Rule`, Type `All ICMP - IPv4`, source `192.168.0.0/16`
+  
+  * Do you need more rules? or less?
+  
+  * Click `Review and Launch`
+  
+* Step 7: Review Instance Launch
+
+  * Review, when happy click `Launch`
+  
+  * Change to `Proceed without a key pair`, `I acknowledge...`, click `Launch Instances`
+
+---
+
+Now let's do the same for the instance in the other vpc. Remember to change order of IPs.
+
+---
+
+## Launching EC2 instance-192-168-4-first in VPC-192-168 and private subnet
+
+* Change to service to `EC2 - Virtual Servers in the Cloud`
+
+* Click on `Launch instance`
+
+* Step 1: Choose an Amazon Machine Image (AMI)
+  
+  * Select first `Amazon Linux 2 AMI (HVM), SSD Volume Type`, click `Select`
+
+* Step 2: Choose an Instance Type
+
+  * Leave the `Free tier eligible` option, click `Next: Configure Instance Details`
+
+* Step 3: Configure Instance Details
+  
+  * In `Network` select `VPC-192-168`
+  
+  * In `Subnet` select `Private subnet-192-168-4`
+  
+  * In `IAM role` select `ROLE-AmazonEC2RoleforSSM`
+
+  * Suggestion, in `Advanced Details` you can add the following scrip to the  `User data`
+  * Always review any script before running.
+  * This below script will install httpd service to displays some [instance-metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html).
+
+```bash
+
+#!/bin/bash
+
+yum update -y
+
+curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a7be426da/raw/3d0930004b937f6dd7f273021218327b7129d609/aws-ec2-userdata-landing-webpage.sh | bash
+
+```
+
+  * Click `Next: Add Storage`
+
+* Step 4: Add Storage
+
+  * Leave Default, click `Next: Add Tags`
+
+
+* Step 5: Add Tags
+
+  * Key - `Name`, Value - `instance-192-168-4-first`
+  
+  * Click `Next: Configure Security Group`
+  
+* Step 6: Configure Security Group
+
+  * Security group name: `SG-inbound-from-10-0`
+  
+  * Security group name: `SG-inbound-from-10-0`
+
+  * Change first Type to `HTTP`, source `10.0.0.0/16`
+  
+  * Click `Add Rule`, Type `All ICMP - IPv4`, source `10.0.0.0/16`
+  
+  * Do you need more rules? or less?
+  
+  * Click `Review and Launch`
+  
+* Step 7: Review Instance Launch
+
+  * Review, when happy click `Launch`
+  
+  * Change to `Proceed without a key pair`, `I acknowledge...`, click `Launch Instances`
+
+---
+
+
 
 
 ## Testing and Advanced commands
