@@ -37,7 +37,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ## Simplified architect diagram
 
-![ec2-vpc-tgw-vpc-ec2-make-it-ping](/assets/images/ec2-vpc-tgw-vpc-ec2-make-it-ping.png)
+* image ![ec2-vpc-tgw-vpc-ec2-make-it-ping](/assets/images/ec2-vpc-tgw-vpc-ec2-make-it-ping.png)
 
 ---
 
@@ -49,7 +49,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 * Services search and select `VPC` "Isolated Cloud Resources"
 
-![aws-services-search-vpc](/assets/images/aws-services-search-vpc.jpeg)
+* image ![aws-services-search-vpc](/assets/images/aws-services-search-vpc.png)
 
 ---
 
@@ -105,7 +105,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 * leave remaning options as default, click `Create VPC`
 
-![vpc-10-0-0](/assets/images/vpc-10-0-0.jpeg)
+* image ![vpc-10-0-0](/assets/images/vpc-10-0-0.png)
 
 * Click `OK` when completed
 
