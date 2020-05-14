@@ -151,24 +151,27 @@ Take 2 minutes to review your new subnets and route tables.
 
 Tip - Use `Filter by VPC`
 
-- Review `Subnets`
+* Review `Subnets`
 
-  - Do you know the difference between `Availability Zone` and `Availability Zone ID`?
+  * Do you know the difference between `Availability Zone` and `Availability Zone ID`?
 
-- Review `Route Tables`
+* Review `Route Tables`
 
-  - Give a name to the route tables - click on tab `Routes` tabs
-  - Check for Destination `0.0.0.0/0`, Target `ine-xx (or nat-xxx)` - This is your `Private-Route-Table`
-  - Check for Destination `0.0.0.0/0`, Target `igw-xx (or nat-xxx)` - This is your `Public-Route-Table`
-  - Notice the `Main` = `Yes` on route table and the message:  *"The following subnets have not been explicitly associated with any route tables and are therefore associated with the main route table"
+  * Give a name to the route tables - click on tab `Routes` tabs
+  
+  * Check for Destination `0.0.0.0/0`, Target `ine-xx (or nat-xxx)` - This is your `Private-Route-Table`
+  
+  * Check for Destination `0.0.0.0/0`, Target `igw-xx` - This is your `Public-Route-Table`
+  
+  * Notice the `Main` = `Yes` on route table and the message:  *"The following subnets have not been explicitly associated with any route tables and are therefore associated with the main route table"
 
-- Review `Internet Gateways`
+* Review `Internet Gateways`
 
-- Review `NAT Gateways`
+* Review `NAT Gateways`
 
-  - Noticed that VPC-192-168 as no `NAT Gateways`, instead we used the `nat instance` which is an EC2 managed by you.
-  - Link on AWS [Comparison of NAT instances and NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html)
-
+  * Notice that VPC-192-168 as no `NAT Gateways`, instead we used the `nat instance` which is an EC2 managed by you.
+  
+  * Link on AWS [Comparison of NAT instances and NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html)
 
 ---
 
