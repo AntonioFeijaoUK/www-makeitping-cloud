@@ -140,6 +140,27 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
 
 ```
 
+
+## Testing and Advanced commands
+
+* Can you ping on both directions? - `ping xxx instance-ip xxx`
+
+* Can you curl on both directions? (with `python3` package you can start a simple webserver `python3 -m http.server 80`
+ * to install python3, type in the instance command line - `sudo yum install python3`
+
+* **Advanced** - Check the throughput and bandwidth with `iperf` ?
+
+* **Advanced** - `iperf` via VPC Peering, can you change the routing to use VPC Peering? Is it the same if you do a VPC peering?
+  * Detail about [VPC Peering](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
+
+* Get you public ip `curl ipinfo.io/json`
+
+* Check the local ip addresses - `ifconfig`
+
+* Check TCP connections - `sudo netstat -pant`
+
+* **Advanced** - If you enable SSM Endpoint, can you see a difference on the connections?
+
 ---
 
 ## Alternative creating VPCs with AWS CLI
