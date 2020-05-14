@@ -61,13 +61,15 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 * Click `Allocate Elastic IP`
 
-* Leave defaul - `Amazon's pool of IPv4 addresses`, click `Allocate`
+* Leave default - `Amazon's pool of IPv4 addresses`, click `Allocate`
 
 * image ![vpc-allocate-elastic-ip](/assets/images/vpc-allocate-elastic-ip.png)
 
+* image ![vpc-allocate-elastic-ip-address-from-amazon-pool](/assets/images/vpc-allocate-elastic-ip-address-from-amazon-pool.png)
+
 ---
 
-### Creating the VPC-10-0-0
+### Creating the VPC-10-0
 
 * Click `VPC Dashboard`
 
@@ -87,7 +89,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
   > [more details here on VPC IP Addressing](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html))
   > [more details here on Private Address Space](https://tools.ietf.org/html/rfc1918#section-3)
 
-* VPC Name: `VPC-10-0-0`
+* VPC Name: `VPC-10-0`
 
 * Public subnet's IPv4 CIDR: `10.0.1.0/24`
 
@@ -143,7 +145,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 * image ![vpc-192-168.png](/assets/images/vpc-192-168.png)
 
-You should now have 2 new VPCs - `VPC-10-0-0` and `VPC-192-168`
+You should now have 2 new VPCs - `VPC-10-0` and `VPC-192-168`
 
 Take 2 minutes to review your new subnets and route tables.
 
