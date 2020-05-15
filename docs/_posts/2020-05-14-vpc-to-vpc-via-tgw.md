@@ -629,10 +629,21 @@ Now that the Transit Gateway knows how to reach both VPCs, we will update the `V
 
 ---
 
-## END
+## Happy with the exercise remember to clear your account
+
+* Delete `nat-instance`
+
+* Delete `TGW`
+
+* Delete `VPCs`
 
 
----
+
+
+
+## The End
+
+
 
 ---
 
