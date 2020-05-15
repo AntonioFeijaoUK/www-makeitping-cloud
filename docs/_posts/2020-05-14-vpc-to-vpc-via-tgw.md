@@ -185,6 +185,8 @@ Tip - Use `Filter by VPC`
 
 * Leave all default, click `Create Transit Gateway`
 
+* Add a name if you wish - `TGW-networking-101`
+
 * That's all for now
 
 ---
@@ -417,15 +419,109 @@ sudo python3 -m http.server 80
 
 ---
 
-## Checkpoint where are we now
+## Checkpoint current situation
 
-OK - we have not fixed the routing, so we cannot reach the oposite subnet just yet!
-
-* Current status
+* Current situation
 
 * image ![ec2-vpc-tgw-vpc-ec2](/assets/images/ec2-vpc-tgw-vpc-ec2.png)
 
+Great, we have 2 VPCs with 1 ec2 instance in each private subnet.
 
+We also have 1 Transit Gateway, but the instances still cannot reach each other.
+
+Next we will be looking at Transit Gateway Routes
+
+---
+
+## Transit Gateway Attachments and Route Tables
+
+* Service `VPC`, scroll down to `Transit Gateway` sections
+
+* Check your `Transit Gateway` that you created, did you git it a named? - `TGW-networking-101`
+
+---
+
+### Transit Gateway Attachment to VPC-10-0
+
+* Click the `Create Transit Gateway Attachment` button to create your first Transit Gateway Attachment
+
+* Transit Gateway ID - `TGW-networking-101`
+
+* Attachment type - `VPC`
+
+* Attachment name tag - `TGW-att-to-VPC-10-0`
+
+* VPC ID - `VPC-10-0`
+
+  * You can only chose one subnet per Availability Zone - choose `Private Subnet-10-0-4`
+  
+---
+
+### Transit Gateway Attachment to VPC-192-168
+
+Repeat for VPC-192-168
+
+* Click the `Create Transit Gateway Attachment` 
+
+* Transit Gateway ID - `TGW-networking-101`
+
+* Attachment type - `VPC`
+
+* Attachment name tag - `TGW-att-to-VPC-192-168`
+
+* VPC ID - `VPC-192-168`
+
+  * You can only chose one subnet per Availability Zone - choose `Private Subnet-192-168-4`
+
+---
+
+### Transit Gateway Route Tables
+
+Now is time to check theTGW route tables
+
+* Click on `Transit Gateway Route Table`
+
+* Name it is you wish - `TGW-default-route-table`
+ 
+* Review the tabs:
+
+  * `Associations` -  should have 2 VPCs
+  
+  * `Propagations` - should have 2 VPCs
+  
+  * `Routes` - should have the 2 subnets `10.0.0.0/16` and `192.168.0.0/16`
+
+And that is it! All the work with `Transit Gateway` is done.
+
+---
+
+### Review Transit Gateway configurations
+
+Note that when we create the `Transit Gateway`, we left all the default options, including
+
+* AWS documentation [how-transit-gateways-work](https://docs.aws.amazon.com/vpc/latest/tgw/how-transit-gateways-work.html)
+
+> "By default, this route table is the default association route table and the default propagation route table."
+
+* Reminder of the TGW options
+
+  * Amazon side ASN: *"Autonomous System Number (ASN) of your Transit Gateway. You can use an existing ASN assigned to your network. If you don't have one, you can use a private ASN in the 64512-65534 or 4200000000-4294967294 range."*
+
+  * DNS support - *"Enable Domain Name System resolution for VPCs attached to this Transit Gateway."*
+  
+  * VPN ECMP support - *"Equal-cost multi-path routing for VPN Connections that are attached to this Transit Gateway."*
+
+  * Default route table association - *"Automatically associate Transit Gateway attachments with this Transit Gateway's default route table."*
+  
+  * Default route table propagation - *"Automatically propagate Transit Gateway attachments with this Transit Gateway's default route table."*
+  
+  * Multicast support - *"Enables the ability to create multicast domains in this Transit Gateway."*
+  
+  * Auto accept shared attachments - "*Automatically accept cross account attachments that are attached to this Transit Gateway.*"
+  
+* image ![create-transit-gateway](/assets/iamges/create-transit-gateway.png)
+  
+  ---
 
 
 
