@@ -631,14 +631,23 @@ Now that the Transit Gateway knows how to reach both VPCs, we will update the `V
 
 ## Happy with the exercise remember to clear your account
 
-* Delete `nat-instance`
+Delete at your own risk! So be careful with what you delete :)
 
-* Delete `TGW`
+
+* Go to `Transit Gateway Route Table`
+
+  * Remove Route tables associations - `Delete association`
+  
+* Delete `Transit Gateway attachment`
+
+* Delete `Transit Gateway`
+
+* Delete instances created with this exercise
 
 * Delete `VPCs`
 
 
-
+---
 
 
 ## The End
