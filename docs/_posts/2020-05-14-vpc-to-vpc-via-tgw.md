@@ -31,7 +31,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 * [whiteboard](https://awwapp.com/b/u6hxhr9cvgwgw/)
 
-* feedback (coming soon)
+* [Feedback](https://survey.immersionday.com/bVV1U5gGR)
 
 
 ---
@@ -105,7 +105,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 * Private subnet name: `Private subnet-10-0-4`
 
-* `Use a NAT instance instead).` - `t2.nano` - `No key pair`
+* Allocate the Elastic IP created previously
 
 * leave remaning options as default, click `Create VPC`
 
