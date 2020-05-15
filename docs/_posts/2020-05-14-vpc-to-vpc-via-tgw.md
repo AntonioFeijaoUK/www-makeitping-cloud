@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Ping from an EC2 instance on private subnet and on different VPC via TGW
-author.name: Antonio Feijao UK
-author: AntonioFeijao UK
+author: Antonio Feijao UK
 toc: true
 categories:
   - ec2
@@ -23,6 +22,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 * auto-gen TOC:
 {:toc}
 
+
 ---
 
 ## Useful links
@@ -33,11 +33,13 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 * feedback (coming soon)
 
+
 ---
 
 ## Simplified architect diagram
 
 * image ![ec2-vpc-tgw-vpc-ec2-make-it-ping](/assets/images/ec2-vpc-tgw-vpc-ec2-make-it-ping.png)
+
 
 ---
 
@@ -173,6 +175,7 @@ Tip - Use `Filter by VPC`
   
   * Link on AWS [Comparison of NAT instances and NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html)
 
+
 ---
 
 ## Creating the TGW
@@ -185,9 +188,10 @@ Tip - Use `Filter by VPC`
 
 * Leave all default, click `Create Transit Gateway`
 
-* Add a name if you wish - `TGW-networking-101`
+* Add a name - `TGW-networking-101`
 
-* That's all for now
+* That is all for now.
+
 
 ---
 
@@ -210,6 +214,7 @@ Tip - Use `Filter by VPC`
 * Role name `ROLE-AmazonEC2RoleforSSM`, click `Create role`
 
 We done here.
+
 
 ---
 
@@ -286,6 +291,7 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
 
 Now let's do the same for the instance in the other vpc. Remember to change order of IPs.
 
+
 ---
 
 ## Launching EC2 instance-192-168-4-first in VPC-192-168 and private subnet
@@ -357,6 +363,7 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
   
   * Change to `Proceed without a key pair`, `I acknowledge...`, click `Launch Instances`
 
+
 ---
 
 ## Access your instance through AWS Systems Manager
@@ -374,6 +381,20 @@ After a few minutes (can take up to 10 minutes), you should see your instance on
 You are now connected to the console of the instance in the private subnet.
 
 > Did you notice we did not have to manage `ssh key` to access this instance command line
+
+
+---
+
+## There is no bug instance-192-168-4-first
+
+There is no bug!
+
+If you follow the steps above, the instance `instance-192-168-4-first` will NOT show up on `AWS Systems Manager` section `Managed Instances`.
+
+The instance will also not install the `user data` script.
+
+Can you figure out why?
+
 
 ---
 
@@ -431,6 +452,7 @@ We also have 1 Transit Gateway, but the instances still cannot reach each other.
 
 Next we will be looking at Transit Gateway Routes
 
+
 ---
 
 ## Transit Gateway Attachments and Route Tables
@@ -481,7 +503,7 @@ Now is time to check theTGW route tables
 
 * Click on `Transit Gateway Route Table`
 
-* Name it is you wish - `TGW-default-route-table`
+* Add a name - `TGW-default-route-table`
  
 * Review the tabs:
 
@@ -499,42 +521,122 @@ And that is it! All the work with `Transit Gateway` is done.
 
 Note that when we create the `Transit Gateway`, we left all the default options, including
 
+* Reminder of the TGW options
+
+  * **Amazon side ASN** - *"Autonomous System Number (ASN) of your Transit Gateway. You can use an existing ASN assigned to your network. If you don't have one, you can use a private ASN in the 64512-65534 or 4200000000-4294967294 range."*
+
+  * **DNS support** - *"Enable Domain Name System resolution for VPCs attached to this Transit Gateway."*
+  
+  * **VPN ECMP support** - *"Equal-cost multi-path routing for VPN Connections that are attached to this Transit Gateway."*
+
+  * **Default route table association** - *"Automatically associate Transit Gateway attachments with this Transit Gateway's default route table."*
+  
+  * **Default route table propagation** - *"Automatically propagate Transit Gateway attachments with this Transit Gateway's default route table."*
+  
+  * **Multicast support** - *"Enables the ability to create multicast domains in this Transit Gateway."*
+  
+  * **Auto accept shared attachments** - "*Automatically accept cross account attachments that are attached to this Transit Gateway.*"
+
 * AWS documentation [how-transit-gateways-work](https://docs.aws.amazon.com/vpc/latest/tgw/how-transit-gateways-work.html)
 
 > "By default, this route table is the default association route table and the default propagation route table."
 
-* Reminder of the TGW options
-
-  * Amazon side ASN: *"Autonomous System Number (ASN) of your Transit Gateway. You can use an existing ASN assigned to your network. If you don't have one, you can use a private ASN in the 64512-65534 or 4200000000-4294967294 range."*
-
-  * DNS support - *"Enable Domain Name System resolution for VPCs attached to this Transit Gateway."*
-  
-  * VPN ECMP support - *"Equal-cost multi-path routing for VPN Connections that are attached to this Transit Gateway."*
-
-  * Default route table association - *"Automatically associate Transit Gateway attachments with this Transit Gateway's default route table."*
-  
-  * Default route table propagation - *"Automatically propagate Transit Gateway attachments with this Transit Gateway's default route table."*
-  
-  * Multicast support - *"Enables the ability to create multicast domains in this Transit Gateway."*
-  
-  * Auto accept shared attachments - "*Automatically accept cross account attachments that are attached to this Transit Gateway.*"
-  
 * image ![create-transit-gateway](/assets/iamges/create-transit-gateway.png)
-  
-  ---
 
-
-
-* **Advanced** - Check the throughput and bandwidth with `iperf` ?
-
-* **Advanced** - `iperf` via VPC Peering, can you change the routing to use VPC Peering? Is it the same if you do a VPC peering?
-  * Detail about [VPC Peering](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
-
-* **Advanced** - If you enable SSM Endpoint, can you see a difference on the connections?
 
 ---
 
-Below sections if WORK IN PROGRESS - Waiting for feedback
+## VPCs route tables
+
+Now that the Transit Gateway knows how to reach both VPCs, we will update the `VPCs route tables` to use the `Transit Gateway Attachment` to reach the other VPC.
+
+---
+
+### VPC-10-0 update route table to use TGW to reach VPC-192-168
+
+* Service `VPC`
+
+* Filter by VPC - Select `VPC-10-0`
+
+* Go to `Route Tables`
+
+* Check the tab `Routes`
+
+* Select your `Private-Route-Table`, is the route table that has the default route of 0.0.0.0 to the nat gateway 
+
+* Click `Edit routes` add a new route Destination `192.168.0.0/16` - Target `tgw-xxxx`
+
+---
+
+### VPC-192-168 update route table to use TGW to reach VPC-10-0
+
+* Change Filter by VPC - Select `VPC-192-168`
+
+* Go to `Route Tables`
+
+* Check the tab `Routes`
+
+* Select your `Private-Route-Table`, is the route table that has the default route of 0.0.0.0 to the nat instance (eni-xxx) 
+
+* Click `Edit routes` add a new route Destination `10.0.0.0/16` - Target `tgw-xxxx`
+
+* image 1 ![route-table-vpc-192-168-step1](/assets/images/route-table-vpc-192-168-step1.png)
+
+* image 2 ![route-table-vpc-192-168-step2](/assets/images/route-table-vpc-192-168-step2.png)
+
+* image 3 ![route-table-vpc-192-168-step3](/assets/images/route-table-vpc-192-168-step3.png)
+
+* Important to understand
+
+  * `VPC-192-168` will forward packets with `Destination` to `10.0.0.0/16` via the `Transit Gateway Attachment`
+  
+  * Packet "arrives" at the `Transit Gateway Attachment` within the `Associated route table`, from here check where to forward the packet with `Destination` to `10.0.0.0/16`
+  
+  * Transit Gateway "knows" how to reach the subnet `10.0.0.0/16` via the attachment to the `VPC-10-0`
+  
+---
+
+
+## Make it ping
+
+* Now that all the route tables are updated, is time for testing
+
+* Going back to `AWS Systems Manager`, section `Managed Instance`
+
+* Select one of the instance, click `Actions`, `Start Session`
+
+  * Did you figure why the `instance-192-168-4-first` was not showing on `Managed Instance`
+
+* You can go back to the session above on [#testing-using-ping-and-other-command-line-tools](#testing-using-ping-and-other-command-line-tools)
+
+* image ![aws-systems-manager-start-session](/assets/images/aws-systems-manager-start-session.png)
+
+
+---
+
+## Advanced challenges
+
+* While connected to the instances, the command `sudo netstat -pant` shows  `ESTABLISHED` for the service `ssm-session-w`, can you change that to only use the subnet private ips? (tip: SSM Endpoint)
+
+* image ![netstat-pant-ssm-public-ips.png](/assets/images/netstat-pant-ssm-public-ips.png)
+
+* Check the throughput and bandwidth with `iperf` via TGW ?
+
+* `iperf` via VPC Peering, can you change the routing to use VPC Peering? Is it the same if you do a VPC peering?
+
+  * Detail about [VPC Peering](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
+
+
+---
+
+## END
+
+
+---
+
+---
+
+Sections below is WORK IN PROGRESS - Waiting for feedback
 
 ---
 ## Alternative creating VPCs with AWS CLI
