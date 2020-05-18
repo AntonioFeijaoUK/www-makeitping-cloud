@@ -31,7 +31,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 * [whiteboard](https://awwapp.com/b/u6hxhr9cvgwgw/)
 
-* [Feedback](https://survey.immersionday.com/bVV1U5gGR)
+* Feedback(*feedback is not closed, thank you*)
 
 
 ---
