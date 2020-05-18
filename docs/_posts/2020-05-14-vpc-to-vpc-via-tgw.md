@@ -321,7 +321,6 @@ Now let's do the same for the instance in the other vpc. Remember to change orde
   * This below script will install httpd service to displays some [instance-metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html).
 
 ```bash
-
 #!/bin/bash
 
 yum update -y
@@ -662,7 +661,6 @@ Sections below is WORK IN PROGRESS - Waiting for feedback
 ## Alternative creating VPCs with AWS CLI
 
 ```bash
-
 aws ec2 create-vpc --cidr-block 10.0.0.0/16
 
 VPC_ID="Copy-VPC-ID-value-from-previous-command"
