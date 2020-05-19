@@ -2,7 +2,6 @@
 layout: post
 last_modified_date: 2020-05-19
 title: Ping from an EC2 instance on private subnet and on different VPC via TGW
-author: Antonio Feijao UK
 toc: true
 categories:
   - ec2
