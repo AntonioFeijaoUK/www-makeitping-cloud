@@ -1,10 +1,15 @@
 theme: jekyll-theme-slate
 #theme: jekyll-theme-minimal
 
-title: "Antonio AWS"
-description: "Antonio AWS is a personal webpage maintained by Antonio Feijao UK. The opinions expressed are my own and do not necessarily represent those of current or past employers."
+title: "AntonioAWS.com by  Antonio Feijao UK"
 
-page.author: "Antonio Feijao UK"
+description: "AntonioAWS.com is a personal website maintained by Antonio Feijao UK. The opinions expressed are my own and do not necessarily represent those of current or past employers."
+
+
+author: Antonio Feijao UK
+
+page.author: AntonioFeijaoUK
+
 
 logo: "https://avatars1.githubusercontent.com/u/2548084?s=460&u=9e50289e33b8c3fd3d8778afd89f46d27ec70f35&v=4"
 
