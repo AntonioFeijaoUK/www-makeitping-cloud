@@ -20,6 +20,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
   - jemoji
+  - jekyll-avatar
 # - jekyll-redirect-from
 
 markdown: kramdown
