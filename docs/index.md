@@ -5,7 +5,7 @@ title: Learning by doing! Hands-on AWS exercises with Antonio Feijao UK at Anton
 
 Learning by doing! Hands-on [AWS](https://aws.amazon.com) exercises with [Antonio Feijao UK](https://www.antoniocloud.com) on this personal website [www.AntonioAWS.com](https://www.antonioaws.com)
 
-{% avatar AntonioFeijaoUK size=500 %}
+{% avatar AntonioFeijaoUK size=200 %}
 
 ---
 
