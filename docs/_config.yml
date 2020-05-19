@@ -21,6 +21,7 @@ plugins:
   - jekyll-toc
   - jemoji
   - jekyll-avatar
+  - jekyll-paginate
 # - jekyll-redirect-from
 
 markdown: kramdown
