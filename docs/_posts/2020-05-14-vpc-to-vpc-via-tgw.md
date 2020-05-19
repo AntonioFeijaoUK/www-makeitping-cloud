@@ -18,6 +18,9 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ---
 
+{% avatar AntonioFeijaoUK %}
+
+
 ## Table of contents
 
 * auto-gen TOC:
