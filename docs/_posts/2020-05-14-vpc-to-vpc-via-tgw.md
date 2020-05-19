@@ -1,10 +1,10 @@
 ---
 layout: post
+last_modified_at: 2020-05-19
+date: 2020-05-15
 title: Ping from an EC2 instance on private subnet and on different VPC via TGW
 author: Antonio Feijao UK
-username: AntonioFeijaoUK
 toc: true
-last_modified_at: 2020-05-19
 categories:
   - ec2
   - networking
@@ -19,7 +19,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ---
 
-{% avatar {{ username }} size=50 %}
+{% avatar AntonioFeijaoUK size=50 %}
 
 
 ## Table of contents
