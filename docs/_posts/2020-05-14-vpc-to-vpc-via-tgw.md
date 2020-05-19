@@ -18,7 +18,7 @@ In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/)
 
 ---
 
-{% avatar AntonioFeijaoUK %}
+{% avatar AntonioFeijaoUK lazy=true size=50 %}
 
 
 ## Table of contents
