@@ -3,6 +3,7 @@ layout: post
 title: Ping from an EC2 instance on private subnet and on different VPC via TGW
 author: Antonio Feijao UK
 toc: true
+last_modified_at: 2020-05-19
 categories:
   - ec2
   - networking
@@ -714,6 +715,16 @@ aws ec2 create-internet-gateway
 ### Associating the Subnets with Route tables
 
 ... work in progress
+
+- [ ] testt area..
+- [x] testt area..
+- [ ] testt area..
+
+:grinning:
+
+:innocent:
+
+:gb:
 
 
 ---
