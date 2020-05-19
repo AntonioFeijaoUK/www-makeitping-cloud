@@ -1,11 +1,15 @@
 ---
 layout: default
-title: Learning by doing! Hands on AWS exercises with Antonio AWS
+title: Learning by doing! Hands-on AWS exercises with Antonio Feijao UK at AntonioAWS.com
 ---
 
-{% avatar AntonioFeijaoUK size=100 %}
+Learning by doing! Hands-on [AWS](https://aws.amazon.com) exercises with [Antonio Feijao UK](https://www.antoniocloud.com) on this personal website [www.AntonioAWS.com](https://www.antonioaws.com)
 
-Learning by doing! Hands on AWS exercises with [Antonio AWS](https://www.AntonioAWS.com)
+{% avatar AntonioFeijaoUK size=500 %}
+
+---
+
+## Posts 
 
 <ul>
   {% for post in site.posts %}
