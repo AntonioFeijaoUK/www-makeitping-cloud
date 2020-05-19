@@ -19,7 +19,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-toc
-  - jekyll-jemoji
+  - jemoji
 # - jekyll-redirect-from
 
 markdown: kramdown
