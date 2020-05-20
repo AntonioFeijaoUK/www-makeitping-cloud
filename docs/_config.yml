@@ -29,6 +29,7 @@ plugins:
   - jemoji
   - jekyll-avatar
   - jekyll-paginate
+  - jekyll-include-cache
 # - jekyll-redirect-from
 
 markdown: kramdown
