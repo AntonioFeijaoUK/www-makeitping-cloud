@@ -1,9 +1,9 @@
-remote_theme: "mmistakes/minimal-mistakes@4.19.2"
+#remote_theme: "mmistakes/minimal-mistakes@4.19.2"
 
-#theme: jekyll-theme-slate
+theme: jekyll-theme-slate
 #theme: jekyll-theme-minimal
 
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+#minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-GB"
