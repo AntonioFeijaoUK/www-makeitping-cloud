@@ -1,15 +1,13 @@
 theme: jekyll-theme-slate
 #theme: jekyll-theme-minimal
 
-title: "AntonioAWS.com by  Antonio Feijao UK"
+title: "MakeItPing.Cloud by Antonio Feijao UK"
 
-description: "AntonioAWS.com is a personal website maintained by Antonio Feijao UK. The opinions expressed are my own and do not necessarily represent those of current or past employers."
-
+description: "AWS hands-on networking workshops with makeitping.cloud - Makeitping.cloud is a personal website maintained by Antonio Feijao UK. Disclaimer: The opinions expressed are my own and do not necessarily represent those of current or past employers. The content in this website is intended for educational use. Use at Your Own Risk Own."
 
 author: Antonio Feijao UK
 
 page.author: AntonioFeijaoUK
-
 
 logo: "https://avatars1.githubusercontent.com/u/2548084?s=460&u=9e50289e33b8c3fd3d8778afd89f46d27ec70f35&v=4"
 
