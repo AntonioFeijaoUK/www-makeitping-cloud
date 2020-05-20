@@ -1,13 +1,12 @@
 ---
 layout: default
-title: Learning by doing! AWS Hands-on networking workshops with makeitping.cloud - Make it ping!
+title: Learning by doing! Hands-on networking workshops on AWS with makeitping.cloud - Make it ping!
 ---
 
-Learning by doing! Hands-on [AWS](https://aws.amazon.com) networking workshops.
+Learning by doing! Hands-on networking workshops on [AWS](https://aws.amazon.com) .
 
-**Disclaimer**: The opinions expressed are my own and do not necessarily represent those of current or past employers. The content in this website is intended for educational use. Use at Your Own Risk Own.
+**Disclaimer**: [Makeitping.cloud](https://www.makeitping.cloud) is a personal website maintained by [Antonio Feijao UK](https://www.antoniocloud.com). The opinions expressed are my own and do not necessarily represent those of current or past employers. The content in this website is intended for educational use. Use at Your Own Risk Own.
 
-[Makeitping.cloud](https://www.makeitping.cloud) is a personal website maintained by [Antonio Feijao UK](https://www.antoniocloud.com). 
 
 {% avatar AntonioFeijaoUK size=200 %}
 
