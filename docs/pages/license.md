@@ -1,3 +1,9 @@
+---
+layout: default
+title: License
+permalink: /license/
+---
+
 MIT License
 
 Copyright (c) 2020 Antonio Feijao UK
