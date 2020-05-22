@@ -23,7 +23,8 @@ page.author: AntonioFeijaoUK
 
 logo: "https://avatars1.githubusercontent.com/u/2548084?s=460&u=9e50289e33b8c3fd3d8778afd89f46d27ec70f35&v=4"
 
-permalink: pretty
+#permalink: pretty
+permalink: none
 
 show_downloads: "false"
 
