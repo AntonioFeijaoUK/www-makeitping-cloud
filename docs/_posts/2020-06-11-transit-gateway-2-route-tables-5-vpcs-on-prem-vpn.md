@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2020-05-18 00:15:00 +0000
-last_modified_at: 2020-06-11 00:55:00 +0000
+date: 2020-06-11 00:30:00 +0000
+last_modified_at: 2020-06-11 01:23:00 +0000
 title: "Transit Gateway with 2 route tables connecting shared-services VPC and isolated Dev Test and Prod VPCs and all connected back to on-prem via Customer Gateway VPN"
 categories:
   - AWS
