@@ -8,7 +8,7 @@ Learning by doing! Hands-on networking workshops on [AWS](https://aws.amazon.com
 **Disclaimer**: [Makeitping.cloud](https://www.makeitping.cloud) is a personal website maintained by [Antonio Feijao UK](https://www.antoniocloud.com). The opinions expressed are my own and do not necessarily represent those of current or past employers. The content in this website is intended for educational use. Use at Your Own Risk Own.
 
 
-{% avatar AntonioFeijaoUK size=200 %}
+{% avatar AntonioFeijaoUK size=100 %}
 
 ---
 
