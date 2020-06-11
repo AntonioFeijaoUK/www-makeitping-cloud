@@ -60,4 +60,4 @@ In this workshop we will have:
   * [AWS re:Invent 2019: [REPEAT 1] AWS Transit Gateway reference architectures for many VPCs (NET406-R1)](https://youtu.be/9Nikqn_02Oc)
 
 
-[Reference Network Architecture NET406-R1](/assets/images/Reference-Network-Architecture-NET406-R1.png)
+![Reference Network Architecture NET406-R1](/assets/images/Reference-Network-Architecture-NET406-R1.png)
