@@ -1,7 +1,8 @@
 ---
 layout: post
-last_modified_at: 2020-05-19  19:24:00 0000
-title: Ping from an EC2 instance on private subnet and on different VPC via TGW
+date: 2020-06-11 00:59:05 +0000
+last_modified_at: 2020-06-11  00:59:30 +0000
+title: "Ping from an EC2 instance on private subnet and on different VPC via TGW"
 toc: true
 categories:
   - AWS
@@ -17,7 +18,7 @@ tags:
   - aws
 ---
 
-In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/) in a [private subnet](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html), going across a [Transit Gateway (TGW)](https://aws.amazon.com/transit-gateway/) until we reach another [EC2 instance](https://aws.amazon.com/ec2/) in another [private subnet](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html).
+**Make it ping workshop 001** - In this exercise we will `ping` from [EC2 instance](https://aws.amazon.com/ec2/) in a [private subnet](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html), going across a [Transit Gateway (TGW)](https://aws.amazon.com/transit-gateway/) until we reach another [EC2 instance](https://aws.amazon.com/ec2/) in another [private subnet](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html).
 
 ---
 
