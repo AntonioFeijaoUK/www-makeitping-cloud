@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2020-06-11 00:59:05 +0000
-last_modified_at: 2020-06-11  00:59:30 +0000
+date: 2020-05-18 00:59:05 +0000
+last_modified_at: 2020-06-10  20:30:00 +0000
 title: "Ping from an EC2 instance on private subnet and on different VPC via TGW"
 toc: true
 categories:
