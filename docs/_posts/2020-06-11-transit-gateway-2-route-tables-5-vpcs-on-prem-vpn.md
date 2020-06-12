@@ -2,7 +2,7 @@
 layout: post
 date: 2020-06-11 00:30:00 +0000
 last_modified_at: 2020-06-11 01:23:00 +0000
-title: "Transit Gateway with 2 route tables connecting shared-services VPC and isolated Dev Test and Prod VPCs and all connected back to on-prem via Customer Gateway VPN"
+title: "Workshop 002 - Transit Gateway with 2 route tables connecting shared-services VPC and isolated Dev Test and Prod VPCs and all connected back to on-prem via Customer Gateway VPN"
 categories:
   - AWS
   - Networking
@@ -17,7 +17,7 @@ tags:
   - aws
 ---
 
-**Workshop 002 (comming soon...)** - In this hands-on workshop we will use a Transit Gateway with 2 route-tables to isolate Dev-VPC, Test-VPC and Prod-VPC from the Shared-Services VPC. We will also add a connection to On-prem-VPC.
+==**Workshop 002 (comming soon...)**== - In this hands-on workshop we will use a Transit Gateway with 2 route-tables to isolate Dev-VPC, Test-VPC and Prod-VPC from the Shared-Services VPC. We will also add a connection to On-prem-VPC.
 
 **Requirements** : All VPCs can connect to with On-prem-VPC and Shared-services-VPC. Dev-VPC, Test-VPC, Prod-VPC cannot interact with each other.
 
