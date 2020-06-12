@@ -28,7 +28,7 @@ permalink: none
 
 show_downloads: "false"
 
-google_analytics: ""
+google_analytics: "UA-169300564-1"
 
 plugins:
   - jekyll-feed
