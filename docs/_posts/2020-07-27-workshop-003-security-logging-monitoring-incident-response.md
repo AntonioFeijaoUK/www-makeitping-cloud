@@ -91,7 +91,7 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
   * `Name` - `webserver-001-default-vpc`
 
 * 6 - Configure Security Group
-  * `Create a new security group`
+  * Create a new security group
   * Name and Description: `http-world`
   * Type: `HTTP`, Protocol: `TCP`, Port Range: `80`, Source Custom: `0.0.0.0/0`, Description
 
@@ -101,3 +101,31 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
 ---
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Creditcs
+
+* Linkedin - [AntonioFeijaoUK](https://www.linkedin.com/in/antoniofeijaouk/)
+* Twitter - [@AntonioFeijaoUK](https://twitter.com/AntonioFeijaoUK)
+* Personal Webpage - [AntonioCloud.Com](https://www.antoniocloud.com)
+
+## The End
+
+## Thank you
