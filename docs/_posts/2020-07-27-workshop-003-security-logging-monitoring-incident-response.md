@@ -50,6 +50,11 @@ Services --> `GuardDuty`
 
 * Enable GuardDuty
 
+* Settings
+  * Sample findings, `Generated sample findings`
+
+* Review sample findings in `Findings`
+
 ---
 
 ## Create AWS Systems Manager role to access the webserver
@@ -140,9 +145,10 @@ cat error_log
 
 ## Part 1 workshop review
 
-* Enabled [Amazon GuardDuty](https://aws.amazon.com/guardduty/) to alert on security [findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html).
+* Enabled [Amazon GuardDuty](https://aws.amazon.com/guardduty/)
+    * Supported security [findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html).
 
-* Created a service role to access an instance without using key par
+* Created an EC2 Service Role to access the webserver instance without using key par
 
 * Named the Default VPC - *more about* [VPC Security](https://docs.aws.amazon.com/vpc/latest/userguide/security.html)
 
@@ -152,26 +158,119 @@ cat error_log
 
 Currently this instance is exposed to the world (`0.0.0.0/0`), we will start adding protection and apply best pratices.
 
-Next we will look at:
+---
 
-* [Amazon EC2](https://aws.amazon.com/ec2/) - *Secure and resizable compute capacity in the cloud. Launch applications when needed without upfront commitments.*
+## Next we will look at:
 
-* [Amazon EC2 Auto Scaling](https://aws.amazon.com/ec2/autoscaling/) - *Add or remove compute capacity to meet changes in demand
-*
+* [Amazon EC2](https://aws.amazon.com/ec2/)
+> Secure and resizable compute capacity in the cloud. Launch applications when needed without upfront commitments.
 
-* [Amazon Inspector](https://aws.amazon.com/inspector/) - *Automated security assessment service to help improve the security and compliance of applications deployed on AWS*
+* [Amazon EC2 Auto Scaling](https://aws.amazon.com/ec2/autoscaling/)
+> Add or remove compute capacity to meet changes in demand
 
-* [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) - *Observability of your AWS resources and applications on AWS and on-premises
+* [Amazon Inspector](https://aws.amazon.com/inspector/)
+> Automated security assessment service to help improve the security and compliance of applications deployed on AWS
 
-* [AWS Auto Scaling](https://aws.amazon.com/autoscaling/) - *Application scaling to optimize performance and costs*
+* [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/)
+> Observability of your AWS resources and applications on AWS and on-premises
 
-* [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) - *Track user activity and API usage*
+* [AWS Auto Scaling](https://aws.amazon.com/autoscaling/)
+> Application scaling to optimize performance and costs
 
-* [AWS Config](https://aws.amazon.com/config/) - *Record and evaluate configurations of your AWS resources*
+* [AWS CloudTrail](https://aws.amazon.com/cloudtrail/)
+> Track user activity and API usage
 
-* [AWS Well-Architected Tool](https://aws.amazon.com/well-architected-tool/) - *Review your architecture and adopt best practices*
+* [AWS Config](https://aws.amazon.com/config/)
+> Record and evaluate configurations of your AWS resources
 
-* [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) - *Reduce costs, increase performance, and improve security*
+* [AWS Well-Architected Tool](https://aws.amazon.com/well-architected-tool/)
+> Review your architecture and adopt best practices
+
+* [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+> Reduce costs, increase performance, and improve security
+
+---
+
+## Create a new VPC with Private and Public subnets
+
+Services --> VPC
+
+Create VPC
+
+* `VPC-10-0-0-0`
+* `10.0.0.0/16`
+
+Select VPC, `Actions`, `Edit DNS hostname`
+
+* enable `DNS hostnames` for the VPC
+
+
+Create Public Subnets
+
+* `Public-Subnet-a-10-0-1`, `us-east-1a`, `10.0.1.0/24`
+* `Public-Subnet-a-10-0-2`, `us-east-1b`, `10.0.2.0/24`
+* `Public-Subnet-a-10-0-3`, `us-east-1c`, `10.0.3.0/24`
+
+
+Create Private Subnets
+
+* `Private-Subnet-a-10-0-4`, `us-east-1a`, `10.0.4.0/24`
+* `Private-Subnet-a-10-0-5`, `us-east-1b`, `10.0.5.0/24`
+* `Private-Subnet-a-10-0-6`, `us-east-1c`, `10.0.6.0/24`
+
+
+Create Public and Private Route tables
+
+* `Public-Route-Table-a`
+* `Public-Route-Table-b`
+* `Public-Route-Table-c`
+
+* `Private-Route-Table-a`
+* `Private-Route-Table-b`
+* `Private-Route-Table-c`
+
+
+Do the `Subnet Associations`
+
+* `Public-Route-Table-a` --> `Public-Subnet-a-10-0-1`
+* `Public-Route-Table-b` --> `Public-Subnet-a-10-0-2`
+* `Public-Route-Table-c` --> `Public-Subnet-a-10-0-3`
+
+* `Public-Route-Table-a` --> `Public-Subnet-a-10-0-4`
+* `Public-Route-Table-b` --> `Public-Subnet-a-10-0-5`
+* `Public-Route-Table-c` --> `Public-Subnet-a-10-0-6`
+
+
+Create 1x `Internet gateways`
+
+* `IGW-VPC-10-0-0-0`
+
+
+Create 3x `NAT Gateway`, associate with the currespondent Public Subnet
+
+* `Name`, `NGW-Public-subnet-10-0-1`
+* `Name`, `NGW-Public-subnet-10-0-2`
+* `Name`, `NGW-Public-subnet-10-0-3`
+
+
+Go back to route tables
+
+* For each `Public Route table`, add `0.0.0.0/0` to the single `IGW-VPC-10-0-0-0` (Internet Gateway)
+
+* For each `Private Route table`, add `0.0.0.0/0` route to the correspondent `NGW-Public-subnet-10-0-x`
+
+
+
+
+---
+
+## Launch an Ubuntu instance in a Private Subnet
+
+Similar previously created `Amazon Linux 2 AMI (HVM), SSD Volume Type`, no launch a version of Ubuntu and select the new VPC and a private subnet
+
+
+
+
 
 ---
 
@@ -180,19 +279,6 @@ Next we will look at:
 Lets create a web architected, secure and high available web application
 
 Sample diagram ![sample-3-tier-web-app-v2](sample-3-tier-web-app-v2.png)
-
-
-
-## Install another instance with Ubuntu
-
-- 
-
-
-
-* 
-
-
-
 
 
 
