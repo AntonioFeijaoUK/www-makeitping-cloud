@@ -25,6 +25,13 @@ Link to [AWS Products page](https://aws.amazon.com/products/)
 
 ---
 
+## Table of contents
+
+* auto-gen TOC:
+{:toc}
+
+---
+
 ## Useful links
 
 * ...links to be shared
@@ -172,7 +179,7 @@ Next we will look at:
 
 Lets create a web architected, secure and high available web application
 
-Sample diagram ![sample-3-tier-web-app](./sample-3-tier-web-app.png)
+Sample diagram ![sample-3-tier-web-app-v2](./sample-3-tier-web-app-v2.png)
 
 
 
