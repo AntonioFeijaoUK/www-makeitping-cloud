@@ -179,7 +179,7 @@ Next we will look at:
 
 Lets create a web architected, secure and high available web application
 
-Sample diagram ![sample-3-tier-web-app-v2](./sample-3-tier-web-app-v2.png)
+Sample diagram ![sample-3-tier-web-app-v2](sample-3-tier-web-app-v2.png)
 
 
 
