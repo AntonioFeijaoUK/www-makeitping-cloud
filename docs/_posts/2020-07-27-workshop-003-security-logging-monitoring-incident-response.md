@@ -191,6 +191,15 @@ Currently this instance is exposed to the world (`0.0.0.0/0`), we will start add
 
 ---
 
+## Create multi-layer security and high available web servers
+
+Lets create a web app well architected, secure and high available
+
+Sample diagram ![sample-3-tier-web-app-v2](/assets/images/sample-3-tier-web-app-v2.png)
+
+
+---
+
 ## Create a new VPC with Private and Public subnets
 
 Services --> VPC
@@ -287,13 +296,7 @@ Services --> VPC
   * Launch without a key par
 
 
----
 
-## Create multi-layer security and high available web servers
-
-Lets create a web architected, secure and high available web application
-
-Sample diagram ![sample-3-tier-web-app-v2](sample-3-tier-web-app-v2.png)
 
 
 
