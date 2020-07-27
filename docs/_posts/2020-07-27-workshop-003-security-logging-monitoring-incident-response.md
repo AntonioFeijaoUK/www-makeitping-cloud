@@ -46,6 +46,8 @@ Link to [AWS Products page](https://aws.amazon.com/products/)
 
 ## Enable GuardDuty
 
+![Amazon GuardDuty](/assets/images/product-page-diagram-Amazon-GuardDuty_how-it-works.png)
+
 Services --> `GuardDuty`
 
 * Enable GuardDuty
