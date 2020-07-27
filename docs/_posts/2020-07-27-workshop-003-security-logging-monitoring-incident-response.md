@@ -53,12 +53,6 @@ Services --> `IAM`
   * Add tags: `Name` - `ROLE-AmazonEC2RoleforSSM`
   * Role name: `ROLE-AmazonEC2RoleforSSM`
 
-Services --> `EC2`
-
-* Running instances
-
-* Select instance, `Actions`, `Instance Settings`, `Attach/Replace IAM Role`, select `ROLE-AmazonEC2RoleforSSM`, `Apply`
-
 ---
 
 ## Name the Default VPC
