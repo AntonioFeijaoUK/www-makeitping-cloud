@@ -100,6 +100,19 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
 
 ---
 
+## Connect to you instance with AWS Systems Manager
+
+Services --> `AWS Systems Manager`
+
+* Managed Instances, select your instance, `Actions`, `Start Session`
+
+
+---
+
+## Part 1 workshop completed
+
+* You now have a webserver exposed on the public internet with the public ip.
+* 
 
 
 
@@ -115,12 +128,7 @@ curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a
 
 
 
-
-
-
-
-
-## Creditcs
+## Done by
 
 * Linkedin - [AntonioFeijaoUK](https://www.linkedin.com/in/antoniofeijaouk/)
 * Twitter - [@AntonioFeijaoUK](https://twitter.com/AntonioFeijaoUK)
