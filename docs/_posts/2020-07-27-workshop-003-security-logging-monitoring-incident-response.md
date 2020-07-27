@@ -279,6 +279,63 @@ Go back to route tables
 
 * For each `Private Route table`, add `0.0.0.0/0` route to the correspondent `NGW-Public-subnet-10-0-x`
 
+---
+
+## Enable VPC flow logs to CloudWatch Logs
+
+Service --> `CloudWatch`
+
+* Go to `Log groups`
+
+* Create log group, Name: `Flow-logs-VPC-10-0-0-0`
+
+
+Service --> `VPC`
+
+Select your VPC
+
+* Down the page, tab `Flow Logs`
+
+* Create flow logs, Filter `All`
+
+* Destination `Send to CloudWatch Logs`, select log group previously created
+
+* IAM role, click on `Set Up Permissions`, refresh, select IAM role just created
+
+* Keep `AWS Default format`
+
+`${version} ${account-id} ${interface-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${packets} ${bytes} ${start} ${end} ${action} ${log-status}`
+
+---
+
+## Enable VPC flow logs to S3 bucket
+
+Service --> `S3`
+
+* Create new bucket
+
+* Confirm Region
+
+* Name `s3-vpc-flow-logs-vpc-10-0-0-0-xxxxx`, Next, Next, Next
+
+* Copy bucket ARN, sample `arn:aws:s3:::s3-vpc-flow-logs-vpc-10-0-0-0-xxxxx`
+
+
+Service --> `VPC`
+
+Select your VPC
+
+* Down the page, tab `Flow Logs`
+
+* Create flow logs, Filter `All`
+
+* Destination `Send to an S3 bucket`, past the S3 ARN, sample `arn:aws:s3:::s3-vpc-flow-logs-vpc-10-0-0-0-xxxxx`
+
+* Keep `AWS Default format`
+
+`${version} ${account-id} ${interface-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${packets} ${bytes} ${start} ${end} ${action} ${log-status}`
+
+
 
 ---
 
