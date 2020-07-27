@@ -92,13 +92,16 @@ Services --> `EC2` --> `Launch Instance`
   * **Advanced Details**, `User data`:
 
 ```bash
+
 #!/bin/bash
 yum  update -y
 
 curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a7be426da/raw/3d0930004b937f6dd7f273021218327b7129d609/aws-ec2-userdata-landing-webpage.sh | bash
 
 # end script
+
 ```
+
 
 * 4 - Add Storage
   * Click `Next`
@@ -193,7 +196,7 @@ Currently this instance is exposed to the world (`0.0.0.0/0`), we will start add
 
 ---
 
-## Create multi-layer security and high available web servers
+## Create a multi-layer secure and high available webserver app architecture
 
 Lets create a web app well architected, secure and high available
 
