@@ -29,7 +29,7 @@ tags:
 
 ---
 
-## Check your region
+## Confirm your Region
 
 * Region **US East (N. Virginia)** `us-east-1`
 
