@@ -25,7 +25,7 @@ tags:
 
 ## Useful links
 
-
+* ...links to be shared
 
 ---
 
@@ -33,7 +33,7 @@ tags:
 
 * Region **US East (N. Virginia)** `us-east-1`
 
---
+---
 
 ## Enable GuardDuty
 
