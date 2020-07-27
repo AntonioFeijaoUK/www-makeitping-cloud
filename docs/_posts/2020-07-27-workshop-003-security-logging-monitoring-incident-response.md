@@ -361,6 +361,18 @@ Services --> VPC
 
   * Launch without a key par
 
+
+## Investigate CloudWatch Logs S3 or Logs groups
+
+* Review `Logs Insights` in CloudWatch Logs
+
+* With [AWS Glue](https://aws.amazon.com/glue/), you can create crawlers to check the S3 metadata
+
+* then, with [Amazon Athena](https://aws.amazon.com/athena/), you can run standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+
+Demo - [How can I use CloudTrail to review what API calls and actions have occurred in my AWS account?](https://youtu.be/4ztTv5rIRv8)
+
+
 ---
 
 ## Amazon Inspector
