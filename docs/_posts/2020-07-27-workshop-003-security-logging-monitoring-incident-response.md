@@ -420,13 +420,16 @@ Confirm assessment is running under `Assessment runs`
 
 * `[version, account_id, interface_id, srcaddr, dstaddr, srcport, dstport = "53", protocol, packets, bytes, start, end, action, log_status ]`
 
-* With [AWS Glue](https://aws.amazon.com/glue/), you can create crawlers to check the S3 metadata
-
-* then, with [Amazon Athena](https://aws.amazon.com/athena/), you can run standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
-
 * <https://docs.aws.amazon.com/athena/latest/ug/vpc-flow-logs.html>
 
 * <https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html>
+
+* Protocol numbers <http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml>
+
+
+With [AWS Glue](https://aws.amazon.com/glue/), you can create crawlers to check the S3 metadata
+
+then, with [Amazon Athena](https://aws.amazon.com/athena/), you can run standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
 
 
 ---
