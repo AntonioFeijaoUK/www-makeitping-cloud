@@ -19,7 +19,7 @@ tags:
   - response
 ---
 
-**Workshop 003 (comming soon...)** - AWS Security fundamentals, logging, monitoring and incident reponse.
+Workshop 003, hands-on learning on AWS. This workshop covers AWS network infrastructure fundamentals, AWS Security fundamentals, logging, monitoring and incident reponse.
 
 Link to [AWS Products page](https://aws.amazon.com/products/)
 
@@ -337,7 +337,7 @@ Select your VPC
 
 ---
 
-## Launch an Ubuntu instance in a Private Subnet
+## Launch an Ubuntu instance in a Private Subnet
 
 Similar previously created `Amazon Linux 2 AMI (HVM), SSD Volume Type`, no launch a version of Ubuntu and select the new VPC and a private subnet
 
@@ -412,10 +412,26 @@ Confirm assessment is running under `Assessment runs`
 
 * Review `Logs Insights` in CloudWatch Logs
 
+* Review VPC flow logs, sample filter
+
+* `[version, account_id, interface_id, srcaddr, dstaddr, srcport, dstport, protocol, packets, bytes, start, end, action != "ACCEPT", log_status ]`
+
+* `[version, account_id, interface_id, srcaddr, dstaddr, srcport, dstport, protocol, packets, bytes, start, end, action != "-", log_status ]`
+
+* `[version, account_id, interface_id, srcaddr, dstaddr, srcport, dstport = "53", protocol, packets, bytes, start, end, action, log_status ]`
+
 * With [AWS Glue](https://aws.amazon.com/glue/), you can create crawlers to check the S3 metadata
 
 * then, with [Amazon Athena](https://aws.amazon.com/athena/), you can run standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
 
+* <https://docs.aws.amazon.com/athena/latest/ug/vpc-flow-logs.html>
+
+* <https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html>
+
+
+---
+
+## Workshop with CloudTrail API and CloudWatch
 
 Let do this! - [How can I use CloudTrail to review what API calls and actions have occurred in my AWS account?](https://youtu.be/4ztTv5rIRv8)
 
