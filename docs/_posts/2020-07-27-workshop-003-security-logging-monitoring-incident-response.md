@@ -37,27 +37,56 @@ tags:
 
 ## Enable GuardDuty
 
-Services --> GuardDuty
+Services --> `GuardDuty`
 
 * Enable GuardDuty
 
 ---
 
+## Create AWS Systems Manager role to access the webserver
+
+Services --> `IAM`
+
+* Roles
+  * Create role, AWS service, `EC2`
+  * Attach permissions policies: `AmazonEC2RoleforSSM`
+  * Add tags: `Name` - `ROLE-AmazonEC2RoleforSSM`
+  * Role name: `ROLE-AmazonEC2RoleforSSM`
+
+Services --> `EC2`
+
+* Running instances
+
+* Select instance, `Actions`, `Instance Settings`, `Attach/Replace IAM Role`, select `ROLE-AmazonEC2RoleforSSM`, `Apply`
+
+---
+
 ## Name the Default VPC
 
-Services --> VPC
+Services --> `VPC`
+
 * Default name `Default-VPC`on existent VPC
 
-Services --> EC2 --> Launch Instance
+---
+
+## Launch first webserver with Public IP
+
+Services --> `EC2` --> `Launch Instance`
 
 * 1 - Choose AMI - `Amazon Linux 2 AMI (HVM), SSD Volume Type`
 
 * 2 - Choose Instance Type - `t2.micro, Free tier eligible`
 
-* 3 - Configure Instance - leave default, add in the "Advanced Details, User data":
+* 3 - Configure Instance
+  * IAM role: `ROLE-AmazonEC2RoleforSSM`
+  * **Advanced Details**, `User data`:
+
 ```bash
 #!/bin/bash
 yum  update -y
+
+curl https://gist.githubusercontent.com/AntonioFeijaoUK/d8533a71e5ecff2971f6859a7be426da/raw/3d0930004b937f6dd7f273021218327b7129d609/aws-ec2-userdata-landing-webpage.sh | bash
+
 # end script
 ```
 
@@ -65,14 +94,16 @@ yum  update -y
   * Click `Next`
 
 * 5 - Add Tags
-  * `Name` - `instance-001-default-vpc`
+  * `Name` - `webserver-001-default-vpc`
 
 * 6 - Configure Security Group
-  * `Select an existing security group`
-  * Select existent security group - `default VPC security group`
+  * `Create a new security group`
+  * Name and Description: `http-world`
+  * Type: `HTTP`, Protocol: `TCP`, Port Range: `80`, Source Custom: `0.0.0.0/0`, Description
 
 * 7 - Review
   * Launch instance without key par - `Proceed without a key pair`, acknowledge and click `Launch Instances`
 
+---
 
 
