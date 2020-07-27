@@ -207,6 +207,10 @@ Sample diagram ![sample-3-tier-web-app-v2](/assets/images/sample-3-tier-web-app-
 
 ## Create a new VPC with Private and Public subnets
 
+![AWS sample network AZ 1](/assets/images/aws-sample-network-az1.png)
+
+![AWS sample network multi AZ private subnets public subnet](/assets/images/aws-sample-network-multiple-az-public-and-private-subnet.png)
+
 Services --> VPC
 
 Create VPC
@@ -300,9 +304,52 @@ Services --> VPC
 
   * Launch without a key par
 
+---
+
+## Amazon Inspector
+
+[Amazon Inspector](https://aws.amazon.com/inspector/)
+
+Services --> Amazon Inspector
+
+* Get started
+* Advanced setup
+* Name: `Assessment-Target-All-Instances`, Next
+* Name: `Assessment-Template-Default`, untick [ ] Assessment Schedule (this is to prevent Inspector to run on creation), Next
+* Create
 
 
+Create your own `Assessment targets` for all instances
 
+* Create, Name `Assessment-all-instances`
+
+* Verify that you could filter by tags,example `Prod`, `Dev` or `Test`
+
+* For this workshop tick `All Instances`, and `Install Agents`
+
+* Save
+
+
+Create your own `Assessment templates` for CVEs
+
+* Create, Name: `Assessment-for-CVEs-only`
+
+* Target name: `Assessment-all-instances`
+
+* Rules packages: `Common Vulnerabilities and Exposures-1.1`
+  * Review the other possible packages
+
+* Duration: `15 minutes`
+
+
+Select your ``Assessment-for-CVEs-only``
+
+* Review `Preview Target`
+
+* Click `Run`
+
+
+Confirm assessment is running under `Assessment runs`
 
 
 
@@ -323,17 +370,10 @@ Services --> VPC
 
 ---
 
-## Done by
+## Thank you
+
+Done by Antonio Feijao UK
 
 * Linkedin - [AntonioFeijaoUK](https://www.linkedin.com/in/antoniofeijaouk/)
 * Twitter - [@AntonioFeijaoUK](https://twitter.com/AntonioFeijaoUK)
 * Personal Webpage - [AntonioCloud.Com](https://www.antoniocloud.com)
-
----
-
-## The End
-
-
----
-
-## Thank you
