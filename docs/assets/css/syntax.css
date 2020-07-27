@@ -41,7 +41,8 @@ pre, code, code.language-plaintext.highlighter-rouge {
   font-weight: bold;
 }
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
-  color: #6c8b9f;
+  /* color: #6c8b9f;   */
+  color: #ccb0b0;
   font-style: italic;
 }
 .highlight .cp {
