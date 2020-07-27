@@ -160,7 +160,7 @@ Currently this instance is exposed to the world (`0.0.0.0/0`), we will start add
 
 ---
 
-## Next we will look at:
+## Next we will look at
 
 * [Amazon EC2](https://aws.amazon.com/ec2/)
 > Secure and resizable compute capacity in the cloud. Launch applications when needed without upfront commitments.
@@ -243,7 +243,8 @@ Do the `Subnet Associations`
 
 Create 1x `Internet gateways`
 
-* `IGW-VPC-10-0-0-0`
+* Name `IGW-VPC-10-0-0-0`
+
 * Select and `Attach to VPC`, `VPC-10-0-0-0`
 
 
@@ -261,16 +262,29 @@ Go back to route tables
 * For each `Private Route table`, add `0.0.0.0/0` route to the correspondent `NGW-Public-subnet-10-0-x`
 
 
-
-
 ---
 
 ## Launch an Ubuntu instance in a Private Subnet
 
 Similar previously created `Amazon Linux 2 AMI (HVM), SSD Volume Type`, no launch a version of Ubuntu and select the new VPC and a private subnet
 
+Services --> VPC
 
+* Launch instance
 
+  * `Ubuntu Server 18.04 LTS (HVM), SSD Volume Type`
+
+  * VPC-10-0-0-0
+
+  * Private Subnet
+
+  * ROLE-AmazonEC2RoleforSSM
+  
+  * Next, Add Tags `Name` - `Ubuntu-instance-001-no-updates`
+
+  * Select an existing security group, `default VPC security group`
+
+  * Launch without a key par
 
 
 ---
