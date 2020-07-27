@@ -244,6 +244,7 @@ Do the `Subnet Associations`
 Create 1x `Internet gateways`
 
 * `IGW-VPC-10-0-0-0`
+* Select and `Attach to VPC`, `VPC-10-0-0-0`
 
 
 Create 3x `NAT Gateway`, associate with the currespondent Public Subnet
