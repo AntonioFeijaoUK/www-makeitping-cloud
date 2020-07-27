@@ -149,7 +149,8 @@ Next we will look at:
 
 * [Amazon EC2](https://aws.amazon.com/ec2/) - *Secure and resizable compute capacity in the cloud. Launch applications when needed without upfront commitments.*
 
-* [Amazon EC2 Auto Scaling](https://aws.amazon.com/ec2/autoscaling/)
+* [Amazon EC2 Auto Scaling](https://aws.amazon.com/ec2/autoscaling/) - *Add or remove compute capacity to meet changes in demand
+*
 
 * [Amazon Inspector](https://aws.amazon.com/inspector/) - *Automated security assessment service to help improve the security and compliance of applications deployed on AWS*
 
@@ -167,9 +168,17 @@ Next we will look at:
 
 ---
 
+## Create multi-layer security and high available web servers
+
+Lets create a web architected, secure and high available web application
+
+Sample diagram ![sample-3-tier-web-app](./sample-3-tier-web-app.png)
+
+
+
 ## Install another instance with Ubuntu
 
-- Try service inspector
+- 
 
 
 
@@ -182,6 +191,14 @@ Next we will look at:
 
 
 
+
+---
+
+## Links to resources
+
+<https://aws.amazon.com/blogs/publicsector/how-to-think-about-zero-trust-architectures-on-aws/>
+
+<https://github.com/aws-samples/aws-refarch-wordpress>
 
 
 
