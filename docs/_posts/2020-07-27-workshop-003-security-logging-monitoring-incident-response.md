@@ -36,16 +36,16 @@ tags:
 * Services --> VPC
   * Default name `Default-VPC`on existent VPC
 
-* Services --> EC2
-  * `Launch Instance`
+* Services --> EC2 --> Launch Instance
   * 1 - Choose AMI - `Amazon Linux 2 AMI (HVM), SSD Volume Type`
   * 2 - Choose Instance Type - `t2.micro, Free tier eligible`
   * 3 - Configure Instance - leave default, add in the "Advanced Details, User data":
   ```bash
   #!/bin/bash
-  yum update -y
+  yum  update -y
+  # end script
   ```
-
+  * 
 
 
 
