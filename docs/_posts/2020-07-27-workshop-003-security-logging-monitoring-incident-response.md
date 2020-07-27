@@ -335,8 +335,6 @@ Select your VPC
 
 `${version} ${account-id} ${interface-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${packets} ${bytes} ${start} ${end} ${action} ${log-status}`
 
-
-
 ---
 
 ## Launch an Ubuntu instance in a Private Subnet
@@ -360,18 +358,6 @@ Services --> VPC
   * Select an existing security group, `default VPC security group`
 
   * Launch without a key par
-
-
-## Investigate CloudWatch Logs S3 or Logs groups
-
-* Review `Logs Insights` in CloudWatch Logs
-
-* With [AWS Glue](https://aws.amazon.com/glue/), you can create crawlers to check the S3 metadata
-
-* then, with [Amazon Athena](https://aws.amazon.com/athena/), you can run standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
-
-Demo - [How can I use CloudTrail to review what API calls and actions have occurred in my AWS account?](https://youtu.be/4ztTv5rIRv8)
-
 
 ---
 
@@ -420,6 +406,30 @@ Select your ``Assessment-for-CVEs-only``
 
 Confirm assessment is running under `Assessment runs`
 
+---
+
+## Investigate with CloudWatch Logs S3 Logs groups and AWS CloudTrail
+
+* Review `Logs Insights` in CloudWatch Logs
+
+* With [AWS Glue](https://aws.amazon.com/glue/), you can create crawlers to check the S3 metadata
+
+* then, with [Amazon Athena](https://aws.amazon.com/athena/), you can run standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+
+
+Let do this! - [How can I use CloudTrail to review what API calls and actions have occurred in my AWS account?](https://youtu.be/4ztTv5rIRv8)
+
+* [AWS CloudTrail](https://aws.amazon.com/cloudtrail/)
+
+```SQL
+
+select count (*) as TotalEvents, useridentity.username, eventname
+from cloudtrail_logs_sample-REVIEW-YOUR-LOG-GROUP-NAME
+where useridentity.type = 'IAMUser'
+group by useridentity.username, eventname
+order by TotalEvents desc;
+
+```
 
 
 
