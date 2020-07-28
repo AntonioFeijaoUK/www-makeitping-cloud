@@ -461,6 +461,53 @@ order by TotalEvents desc;
 
 ## Links to resources
 
+* <https://aws.amazon.com/organizations/getting-started/best-practices/>
+
+* <https://aws.amazon.com/blogs/security/top-10-security-items-to-improve-in-your-aws-account/>
+
+* <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_example-scps.html>
+    * AWS Organizations SCPs
+
+* <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/compliance-validation.html>
+
+* <https://docs.aws.amazon.com/secretsmanager/latest/userguide/best-practices.html>
+
+* <https://aws.amazon.com/security/partner-solutions/>
+
+* <https://aws.amazon.com/products/security/>
+
+* <https://d0.awsstatic.com/whitepapers/compliance/AWS_CIS_Foundations_Benchmark.pdf>
+
+* <https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc#security>
+
+Examples for config rules and SCP
+
+<https://docs.aws.amazon.com/controltower/latest/userguide/guardrails-reference.html>
+
+Security Hub workshop
+
+* <https://github.com/aws-samples/aws-security-hub-workshop>
+
+* Security Workshops series
+
+<https://awssecworkshops.com>
+
+
+Security Logging, monitoring.
+
+<https://aws.amazon.com/guardduty/>
+
+<https://aws.amazon.com/security-hub/>
+
+Videos
+
+* AWS re:Invent 2017: The AWS Philosophy of Security (SID322) - <https://youtu.be/KJiCfPXOW-U>
+* AWS re:Invent 2018: The Tension Between Absolutes & Ambiguity in Security (SEC310) - <https://youtu.be/GXTvlQXVCOs>
+* AWS re:Inforce 2019: Leadership Session: Aspirational Security (SEP318-L) - <https://youtu.be/ad9180b4Xew>
+* AWS re:Invent 2018: Leadership Session: AWS Security (SEC305-L) - <https://youtu.be/MdlFuFhetug>
+
+
+
 <https://aws.amazon.com/blogs/publicsector/how-to-think-about-zero-trust-architectures-on-aws/>
 
 <https://github.com/aws-samples/aws-refarch-wordpress>
