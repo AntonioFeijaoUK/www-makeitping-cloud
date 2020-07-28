@@ -514,7 +514,20 @@ order by TotalEvents desc;
 
 ```
 
+---
 
+## Day 2 
+
+
+* [Security Hub demo 1](https://youtu.be/o0NDi01YPXs?t=1793) from "Introduction to AWS Security Hub - AWS Online Tech Talks"
+
+* [Security Hub demo 2](https://youtu.be/h3yAxwXv5bE?t=847) from "Continuous Monitoring for Compliance with AWS Security Hub - AWS Online Tech Talks"
+
+* [Security Hub demo 2](https://youtu.be/HsWtPG_rTak?t=859) from "AWS re:Inforce 2019: AWS Security Hub: Manage Security Alerts & Automate Compliance (DEM15)"
+
+* [Guarduty automatically blocks suspicious hosts](https://aws.amazon.com/blogs/security/how-to-use-amazon-guardduty-and-aws-web-application-firewall-to-automatically-block-suspicious-hosts/)
+
+* [hands-on coding for Guarduty and Security Hub](https://youtu.be/nyh4imv8zuk) - "Remediating Amazon GuardDuty and AWS Security Hub Findings - AWS Online Tech Talks"
 
 
 ---
