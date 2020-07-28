@@ -63,6 +63,31 @@ Services --> `GuardDuty`
 
 ---
 
+## Create IAM Read Only Group and User
+
+Service --> `IAM`
+
+Create Group 
+
+* Group, Create New Group: `NAME-RO-GROUP`
+
+* Attach Policy, Filter `AWS Managed`, search and select `ReadOnlyAccess`
+
+* Create Group
+
+
+Create Users
+
+* Add users
+
+* User name: `NAME-RO`, select only `AWS Management Console access`, take note of password and login link
+
+* Add user: Add to `NAME-RO-GROUP`
+
+* Next, Create user
+
+---
+
 ## Create AWS Systems Manager role to access the webserver
 
 Services --> `IAM`
