@@ -518,14 +518,15 @@ order by TotalEvents desc;
 
 ## Day 2 
 
+* [ALB AutoScaling and Certificate Manager](http://alb.demo.root.pt/) - from <http://alb.demo.root.pt/>
 
+* [Guarduty automatically blocks suspicious hosts](https://aws.amazon.com/blogs/security/how-to-use-amazon-guardduty-and-aws-web-application-firewall-to-automatically-block-suspicious-hosts/)
+ 
 * [Demo 1 Security Hub](https://youtu.be/o0NDi01YPXs?t=1793) from "Introduction to AWS Security Hub - AWS Online Tech Talks"
 
 * [Demo 2 Security Hub](https://youtu.be/h3yAxwXv5bE?t=847) from "Continuous Monitoring for Compliance with AWS Security Hub - AWS Online Tech Talks"
 
 * [Demo 3 Security Hub](https://youtu.be/HsWtPG_rTak?t=859) from "AWS re:Inforce 2019: AWS Security Hub: Manage Security Alerts & Automate Compliance (DEM15)"
-
-* [Guarduty automatically blocks suspicious hosts](https://aws.amazon.com/blogs/security/how-to-use-amazon-guardduty-and-aws-web-application-firewall-to-automatically-block-suspicious-hosts/)
 
 * [Demo hands-on coding with Guarduty and Security Hub](https://youtu.be/nyh4imv8zuk) - "Remediating Amazon GuardDuty and AWS Security Hub Findings - AWS Online Tech Talks"
 
