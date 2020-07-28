@@ -497,6 +497,9 @@ then, with [Amazon Athena](https://aws.amazon.com/athena/), you can run standard
 
 ## Workshop with CloudTrail API and CloudWatch
 
+
+![cloudtrail-api-review](/assets/images/cloudtrail-api-review.png)
+
 Let do this! - [How can I use CloudTrail to review what API calls and actions have occurred in my AWS account?](https://youtu.be/4ztTv5rIRv8)
 
 * [AWS CloudTrail](https://aws.amazon.com/cloudtrail/)
