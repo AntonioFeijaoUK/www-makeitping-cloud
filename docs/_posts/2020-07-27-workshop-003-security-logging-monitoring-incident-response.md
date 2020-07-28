@@ -191,18 +191,18 @@ cat error_log
 
 ## Part 1 workshop review
 
-[x] Enabled [Amazon GuardDuty](https://aws.amazon.com/guardduty/)
+- [x] Enabled [Amazon GuardDuty](https://aws.amazon.com/guardduty/)
     * Supported security [findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html).
 
-[x] Praction cross account roles
+- [x] Praction cross account roles
 
-[x] Created an EC2 Service Role to access the webserver instance without using key par
+- [x] Created an EC2 Service Role to access the webserver instance without using key par
 
-[x] Named the Default VPC - *more about* [VPC Security](https://docs.aws.amazon.com/vpc/latest/userguide/security.html)
+- [x] Named the Default VPC - *more about* [VPC Security](https://docs.aws.amazon.com/vpc/latest/userguide/security.html)
 
-[x] Created instance with a script in the `user data` field to install a web service service at launch
+- [x] Created instance with a script in the `user data` field to install a web service service at launch
 
-[x] The web service instance only protection is the `inbound` [Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) with `http to the world`, which allow ports 80 from anywhere `0.0.0.0/0`
+- [x] The web service instance only protection is the `inbound` [Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) with `http to the world`, which allow ports 80 from anywhere `0.0.0.0/0`
 
 Currently this instance is exposed to the world (`0.0.0.0/0`), we will start adding protection and apply best pratices.
 
