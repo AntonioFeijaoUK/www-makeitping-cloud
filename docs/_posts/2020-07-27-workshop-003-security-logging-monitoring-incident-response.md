@@ -258,8 +258,8 @@ Services --> VPC
 
 Create VPC
 
-* `VPC-10-0-0-0`
-* `10.0.0.0/16`
+* Name: `VPC-10-0-0-0`
+* IP Range: `10.0.0.0/16`
 
 Select VPC, `Actions`, `Edit DNS hostname`
 
@@ -404,6 +404,14 @@ Services --> VPC
 
   * Launch without a key par
 
+
+--
+
+## Launch a Windows instance in a Private Subnet
+
+* same steps above but choose Windows instance instead
+
+
 ---
 
 ## Amazon Inspector
@@ -413,9 +421,15 @@ Services --> VPC
 Services --> Amazon Inspector
 
 * Get started
+
 * Advanced setup
+
 * Name: `Assessment-Target-All-Instances`, Next
-* Name: `Assessment-Template-Default`, untick [ ] Assessment Schedule (this is to prevent Inspector to run on creation), Next
+
+* Name: `Assessment-Template-Default`
+
+* untick [ ] Assessment Schedule (this is to prevent Inspector to run on creation), Next
+
 * Create
 
 
