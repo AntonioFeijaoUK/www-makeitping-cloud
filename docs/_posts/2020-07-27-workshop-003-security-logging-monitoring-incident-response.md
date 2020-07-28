@@ -191,18 +191,18 @@ cat error_log
 
 ## Part 1 workshop review
 
-- [x] Enabled [Amazon GuardDuty](https://aws.amazon.com/guardduty/)
+* Enabled [Amazon GuardDuty](https://aws.amazon.com/guardduty/)
     * Supported security [findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html).
 
-- [x] Praction cross account roles
+* Practiced IAM cross account Roles
 
-- [x] Created an EC2 Service Role to access the webserver instance without using key par
+* Created an EC2 Service Role to access the webserver instance without using key par
 
-- [x] Named the Default VPC - *more about* [VPC Security](https://docs.aws.amazon.com/vpc/latest/userguide/security.html)
+* Named the Default VPC - *more about* [VPC Security](https://docs.aws.amazon.com/vpc/latest/userguide/security.html)
 
-- [x] Created instance with a script in the `user data` field to install a web service service at launch
+* Created instance with a script in the `user data` field to install a web service service at launch
 
-- [x] The web service instance only protection is the `inbound` [Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) with `http to the world`, which allow ports 80 from anywhere `0.0.0.0/0`
+* The web service instance only protection is the `inbound` [Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) with `http to the world`, which allow ports 80 from anywhere `0.0.0.0/0`
 
 Currently this instance is exposed to the world (`0.0.0.0/0`), we will start adding protection and apply best pratices.
 
@@ -258,35 +258,35 @@ Services --> VPC
 
 Create VPC
 
-- [ ] `VPC-10-0-0-0`
-- [ ] `10.0.0.0/16`
+* `VPC-10-0-0-0`
+* `10.0.0.0/16`
 
 Select VPC, `Actions`, `Edit DNS hostname`
 
-- [ ] enable `DNS hostnames` for the VPC
+* enable `DNS hostnames` for the VPC
 
 
 Create Public Subnets
 
-- [ ] `Public-Subnet-a-10-0-1`, `us-east-1a`, `10.0.1.0/24`
-- [ ] `Public-Subnet-a-10-0-2`, `us-east-1b`, `10.0.2.0/24`
-- [ ] `Public-Subnet-a-10-0-3`, `us-east-1c`, `10.0.3.0/24`
+* `Public-Subnet-a-10-0-1`, `us-east-1a`, `10.0.1.0/24`
+* `Public-Subnet-a-10-0-2`, `us-east-1b`, `10.0.2.0/24`
+* `Public-Subnet-a-10-0-3`, `us-east-1c`, `10.0.3.0/24`
 
 
 Create Private Subnets
 
-- [ ] `Private-Subnet-a-10-0-4`, `us-east-1a`, `10.0.4.0/24`
-- [ ] `Private-Subnet-a-10-0-5`, `us-east-1b`, `10.0.5.0/24`
-- [ ] `Private-Subnet-a-10-0-6`, `us-east-1c`, `10.0.6.0/24`
+* `Private-Subnet-a-10-0-4`, `us-east-1a`, `10.0.4.0/24`
+* `Private-Subnet-a-10-0-5`, `us-east-1b`, `10.0.5.0/24`
+* `Private-Subnet-a-10-0-6`, `us-east-1c`, `10.0.6.0/24`
 
 
 Create Public and Private Route tables
 
-- [ ] `Public-Route-Table`
+* `Public-Route-Table`
 
-- [ ] `Private-Route-Table-a`
-- [ ] `Private-Route-Table-b`
-- [ ] `Private-Route-Table-c`
+* `Private-Route-Table-a`
+* `Private-Route-Table-b`
+* `Private-Route-Table-c`
 
 
 Do the `Subnet Associations`
