@@ -38,7 +38,7 @@ Link to [AWS Products page](https://aws.amazon.com/products/)
 
 * [dasbboard](https://dashboard.eventengine.run/login)
 
-* feedback day 1..
+* [Feedback day 1](https://survey.immersionday.com/pTSqCd4MR)
 
 ---
 
@@ -113,6 +113,8 @@ Services --> `IAM`
 ## Name the Default VPC
 
 Services --> `VPC`
+
+* `Your VPCs`
 
 * Default name `Default-VPC`on existent VPC
 
@@ -189,16 +191,18 @@ cat error_log
 
 ## Part 1 workshop review
 
-* Enabled [Amazon GuardDuty](https://aws.amazon.com/guardduty/)
+[x] Enabled [Amazon GuardDuty](https://aws.amazon.com/guardduty/)
     * Supported security [findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html).
 
-* Created an EC2 Service Role to access the webserver instance without using key par
+[x] Praction cross account roles
 
-* Named the Default VPC - *more about* [VPC Security](https://docs.aws.amazon.com/vpc/latest/userguide/security.html)
+[x] Created an EC2 Service Role to access the webserver instance without using key par
 
-* Created instance with a script in the `user data` field to install a web service service at launch
+[x] Named the Default VPC - *more about* [VPC Security](https://docs.aws.amazon.com/vpc/latest/userguide/security.html)
 
-* The web service instance only protection is the `inbound` [Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) with `http to the world`, which allow ports 80 from anywhere `0.0.0.0/0`
+[x] Created instance with a script in the `user data` field to install a web service service at launch
+
+[x] The web service instance only protection is the `inbound` [Security Group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) with `http to the world`, which allow ports 80 from anywhere `0.0.0.0/0`
 
 Currently this instance is exposed to the world (`0.0.0.0/0`), we will start adding protection and apply best pratices.
 
