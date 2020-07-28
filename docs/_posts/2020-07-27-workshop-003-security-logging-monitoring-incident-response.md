@@ -420,7 +420,7 @@ Services --> VPC
 
 [Amazon Inspector](https://aws.amazon.com/inspector/)
 
-Services --> Amazon Inspector
+Services --> `Inspector`
 
 * Get started
 
