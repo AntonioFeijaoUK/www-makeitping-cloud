@@ -34,7 +34,11 @@ Link to [AWS Products page](https://aws.amazon.com/products/)
 
 ## Useful links
 
-* ...links to be shared
+* ...links to be shared here
+
+* [dasbboard](https://dashboard.eventengine.run/login)
+
+* feedback day 1..
 
 ---
 
