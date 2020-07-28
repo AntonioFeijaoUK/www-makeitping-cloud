@@ -258,44 +258,42 @@ Services --> VPC
 
 Create VPC
 
-* `VPC-10-0-0-0`
-* `10.0.0.0/16`
+- [ ] `VPC-10-0-0-0`
+- [ ] `10.0.0.0/16`
 
 Select VPC, `Actions`, `Edit DNS hostname`
 
-* enable `DNS hostnames` for the VPC
+- [ ] enable `DNS hostnames` for the VPC
 
 
 Create Public Subnets
 
-* `Public-Subnet-a-10-0-1`, `us-east-1a`, `10.0.1.0/24`
-* `Public-Subnet-a-10-0-2`, `us-east-1b`, `10.0.2.0/24`
-* `Public-Subnet-a-10-0-3`, `us-east-1c`, `10.0.3.0/24`
+- [ ] `Public-Subnet-a-10-0-1`, `us-east-1a`, `10.0.1.0/24`
+- [ ] `Public-Subnet-a-10-0-2`, `us-east-1b`, `10.0.2.0/24`
+- [ ] `Public-Subnet-a-10-0-3`, `us-east-1c`, `10.0.3.0/24`
 
 
 Create Private Subnets
 
-* `Private-Subnet-a-10-0-4`, `us-east-1a`, `10.0.4.0/24`
-* `Private-Subnet-a-10-0-5`, `us-east-1b`, `10.0.5.0/24`
-* `Private-Subnet-a-10-0-6`, `us-east-1c`, `10.0.6.0/24`
+- [ ] `Private-Subnet-a-10-0-4`, `us-east-1a`, `10.0.4.0/24`
+- [ ] `Private-Subnet-a-10-0-5`, `us-east-1b`, `10.0.5.0/24`
+- [ ] `Private-Subnet-a-10-0-6`, `us-east-1c`, `10.0.6.0/24`
 
 
 Create Public and Private Route tables
 
-* `Public-Route-Table-a`
-* `Public-Route-Table-b`
-* `Public-Route-Table-c`
+- [ ] `Public-Route-Table`
 
-* `Private-Route-Table-a`
-* `Private-Route-Table-b`
-* `Private-Route-Table-c`
+- [ ] `Private-Route-Table-a`
+- [ ] `Private-Route-Table-b`
+- [ ] `Private-Route-Table-c`
 
 
 Do the `Subnet Associations`
 
-* `Public-Route-Table-a` --> `Public-Subnet-a-10-0-1`
-* `Public-Route-Table-b` --> `Public-Subnet-a-10-0-2`
-* `Public-Route-Table-c` --> `Public-Subnet-a-10-0-3`
+* `Public-Route-Table` --> `Public-Subnet-a-10-0-1`
+* `Public-Route-Table` --> `Public-Subnet-a-10-0-2`
+* `Public-Route-Table` --> `Public-Subnet-a-10-0-3`
 
 * `Public-Route-Table-a` --> `Public-Subnet-a-10-0-4`
 * `Public-Route-Table-b` --> `Public-Subnet-a-10-0-5`
@@ -309,18 +307,22 @@ Create 1x `Internet gateways`
 * Select and `Attach to VPC`, `VPC-10-0-0-0`
 
 
+Go back to route tables
+
+* For `Public-Route-Table`, add `0.0.0.0/0` to the single `IGW-VPC-10-0-0-0` (Internet Gateway)
+
+* For each `Private Route table`, add `0.0.0.0/0` route to the correspondent `NGW-Public-subnet-10-0-x`
+
+
 Create 3x `NAT Gateway`, associate with the currespondent Public Subnet
 
 * `Name`, `NGW-Public-subnet-10-0-1`
+
 * `Name`, `NGW-Public-subnet-10-0-2`
+
 * `Name`, `NGW-Public-subnet-10-0-3`
 
 
-Go back to route tables
-
-* For each `Public Route table`, add `0.0.0.0/0` to the single `IGW-VPC-10-0-0-0` (Internet Gateway)
-
-* For each `Private Route table`, add `0.0.0.0/0` route to the correspondent `NGW-Public-subnet-10-0-x`
 
 ---
 
