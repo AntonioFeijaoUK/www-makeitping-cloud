@@ -88,6 +88,16 @@ Create Users
 
 ---
 
+## Practice Cross Account Role permissions
+
+* Create Role, `Another AWS account`, `Specify accounts that can use this role`, 
+
+* Practice Switch roles
+
+
+
+---
+
 ## Create AWS Systems Manager role to access the webserver
 
 Services --> `IAM`
