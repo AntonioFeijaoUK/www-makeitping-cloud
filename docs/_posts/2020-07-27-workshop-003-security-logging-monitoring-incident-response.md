@@ -307,13 +307,6 @@ Create 1x `Internet gateways`
 * Select and `Attach to VPC`, `VPC-10-0-0-0`
 
 
-Go back to route tables
-
-* For `Public-Route-Table`, add `0.0.0.0/0` to the single `IGW-VPC-10-0-0-0` (Internet Gateway)
-
-* For each `Private Route table`, add `0.0.0.0/0` route to the correspondent `NGW-Public-subnet-10-0-x`
-
-
 Create 3x `NAT Gateway`, associate with the currespondent Public Subnet
 
 * `Name`, `NGW-Public-subnet-10-0-1`
@@ -321,6 +314,15 @@ Create 3x `NAT Gateway`, associate with the currespondent Public Subnet
 * `Name`, `NGW-Public-subnet-10-0-2`
 
 * `Name`, `NGW-Public-subnet-10-0-3`
+
+
+Go back to route tables
+
+* For `Public-Route-Table`, add `0.0.0.0/0` to the single `IGW-VPC-10-0-0-0` (Internet Gateway)
+
+* For each `Private Route table`, add `0.0.0.0/0` route to the correspondent `NGW-Public-subnet-10-0-x`
+
+
 
 
 
