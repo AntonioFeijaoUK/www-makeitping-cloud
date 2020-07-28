@@ -94,7 +94,7 @@ Create Users
 
 * Practice Switch roles
 
-
+* Aditional info about [Roles and Session Duration](https://docs.aws.amazon.com/singlesignon/latest/userguide/howtosessionduration.html)
 
 ---
 
