@@ -518,6 +518,8 @@ order by TotalEvents desc;
 
 ## Day 2 
 
+* [Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
+
 * [ALB AutoScaling and Certificate Manager](http://alb.demo.root.pt/) - from <http://alb.demo.root.pt/>
 
 * [Guarduty automatically blocks suspicious hosts](https://aws.amazon.com/blogs/security/how-to-use-amazon-guardduty-and-aws-web-application-firewall-to-automatically-block-suspicious-hosts/)
