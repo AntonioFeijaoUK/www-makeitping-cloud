@@ -520,7 +520,7 @@ order by TotalEvents desc;
 
 * [Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
 
-* [ALB AutoScaling and Certificate Manager](http://alb.demo.root.pt/) - from <http://alb.demo.root.pt/>
+* [ALB AutoScaling and Certificate Manager](https://alb.demo.root.pt/) - from <https://alb.demo.root.pt/>
 
 * [Guarduty automatically blocks suspicious hosts](https://aws.amazon.com/blogs/security/how-to-use-amazon-guardduty-and-aws-web-application-firewall-to-automatically-block-suspicious-hosts/)
  
