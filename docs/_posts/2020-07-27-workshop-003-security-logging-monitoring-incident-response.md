@@ -534,6 +534,10 @@ order by TotalEvents desc;
 
 * [Demo Amazon Detective](https://youtu.be/MPQe-4NvesM?t=1477) from "AWS re:Invent 2019: [NEW LAUNCH!] Introducing Amazon Detective (SEC312)"
 
+* [Secrets Manager](https://youtu.be/qoxxRlwJKZ4) - from "AWS re:Invent 2018: Best Practices for Managing, Retrieving, & Rotating Secrets at Scale (SEC304)"
+
+
+
 ---
 
 ## Links to resources
