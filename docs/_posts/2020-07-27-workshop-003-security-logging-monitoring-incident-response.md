@@ -36,9 +36,9 @@ Link to [AWS Products page](https://aws.amazon.com/products/)
 
 * ...links to be shared here
 
-* [dasbboard](https://dashboard.eventengine.run/login)
+* dasbboard...
 
-* [Feedback day 2](https://survey.immersionday.com/lse3jOVGR)
+* Feedback day 2...
 
 ---
 
